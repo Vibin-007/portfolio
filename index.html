@@ -1,238 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vibin D | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibin - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- <div class="cursor-follower" id="cursorFollower">
+        <div class="cursor-name" id="cursorName"></div>
+    </div> -->
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Welcome</p>
+        </div>
+    </div>
 
-  <div class="scroll-container">
-
-    <!-- Navigation -->
-    <nav class="navbar">
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certificates">Certificates</a></li>
-    <li><a href="#workshop">Workshop</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link" id="home">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle-container">
+                <button class="theme-toggle hidden" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            </svg>
+                            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="section hero-section">
-      <div class="glass-card">
-        <h1>I`M VIBIN</h1>
-        <h3>STUDENT</h3>
-        <a href="#contact" class="btn">Let's Connect</a>
-      </div>
+    <section id="hero" class="hero">
+        <div class="particles-container"></div>
+        <div class="particles-container"></div>
+        <div class="hero-content container">
+
+
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    VIBIN D
+                </h1>
+                <p class="hero-description">Passionate about coding and web development, seeking opportunities to apply skills, learn new technologies, and grow as a developer</p>
+                <div class="hero-buttons">
+                    <a href="Vibin_Resume.pdf" target="_blank" class="btn btn--primary" style="color: black;">View Resume</a>
+                    <a href="#contact" class="btn btn--primary" style="color: black;">Get In Touch</a>
+                </div>
+                <div class="hero-contact">
+                    <span>📍 Coimbatore, Tamil Nadu</span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="hero-scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div> -->
     </section>
 
-    <!-- Sections -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    As a passionate Computer Science student with a focus on coding and web development, I seek opportunities to apply my skills, learn new technologies, and grow as a developer. I am eager to contribute to innovative projects and gain hands-on experience in real-world applications.
-  </p>
-</section>
-
-
-
-<section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="skill-cards">
-
-        <!-- HTML Card -->
-        <div class="skill-card">
-          <div class="card-header">
-            
-            <svg width="123px" height="123px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"></path> <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"></path> </g></svg>
-          </div>
-          <p>HTML</p>
-          
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        As a passionate Computer Science student with a focus on coding and web development, I seek opportunities to apply my skills, learn new technologies, and grow as a developer. I am eager to contribute to innovative projects and gain hands-on experience in real-world applications.
+                    </p>
+                    <div class="languages-section">
+                        <h3>Languages</h3>
+                        <div class="languages-list">
+                            <span class="language-tag" style="color: black;">Tamil</span>
+                            <span class="language-tag" style="color: black;">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Python Card -->
-        <div class="skill-card">
-          <div class="card-header">
-            
-<svg width="123px" height="123px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"></path> <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"></path> </g></svg>          </div>
-          <p>CSS</p>
-          
-        </div>
-
-        <div class="skill-card">
-          <div class="card-header">
-            
-<svg width="123px" height="123px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" fill="#FFCA28"></rect> <path d="M19 25.2879L21.0615 23.9237C21.2231 24.4313 22.2462 25.6368 23.5385 25.6368C24.8308 25.6368 25.4308 24.931 25.4308 24.463C25.4308 23.1878 24.1112 22.7382 23.4774 22.5223C23.374 22.4871 23.289 22.4581 23.2308 22.4328C23.2009 22.4198 23.1558 22.4025 23.0979 22.3804C22.393 22.1111 19.7923 21.1175 19.7923 18.2373C19.7923 15.065 22.8538 14.7002 23.5462 14.7002C23.9991 14.7002 26.1769 14.7557 27.2615 16.7939L25.2615 18.1898C24.8231 17.3015 24.0946 17.0081 23.6462 17.0081C22.5385 17.0081 22.3077 17.8201 22.3077 18.1898C22.3077 19.227 23.5112 19.6919 24.5273 20.0844C24.7932 20.1871 25.0462 20.2848 25.2615 20.3866C26.3692 20.91 28 21.7666 28 24.463C28 25.8136 26.8672 28.0002 24.0154 28.0002C20.1846 28.0002 19.1692 25.7003 19 25.2879Z" fill="#3E3E3E"></path> <path d="M9 25.5587L11.1487 24.1953C11.317 24.7026 11.9713 25.638 12.9205 25.638C13.8698 25.638 14.3557 24.663 14.3557 24.1953V15.0002H16.9982V24.1953C17.041 25.4636 16.3376 28.0002 13.2332 28.0002C10.379 28.0002 9.19242 26.3039 9 25.5587Z" fill="#3E3E3E"></path> </g></svg>          </div>
-          <p>JavaScript</p>
-          
-        </div>
-        <div class="skill-card">
-          <div class="card-header">
-            
-<svg width="123px" height="123px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0164 2C10.8193 2 9.03825 3.72453 9.03825 5.85185V8.51852H15.9235V9.25926H5.97814C3.78107 9.25926 2 10.9838 2 13.1111L2 18.8889C2 21.0162 3.78107 22.7407 5.97814 22.7407H8.27322V19.4815C8.27322 17.3542 10.0543 15.6296 12.2514 15.6296H19.5956C21.4547 15.6296 22.9617 14.1704 22.9617 12.3704V5.85185C22.9617 3.72453 21.1807 2 18.9836 2H13.0164ZM12.0984 6.74074C12.8589 6.74074 13.4754 6.14378 13.4754 5.40741C13.4754 4.67103 12.8589 4.07407 12.0984 4.07407C11.3378 4.07407 10.7213 4.67103 10.7213 5.40741C10.7213 6.14378 11.3378 6.74074 12.0984 6.74074Z" fill="url(#paint0_linear_87_8204)"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9834 30C21.1805 30 22.9616 28.2755 22.9616 26.1482V23.4815L16.0763 23.4815L16.0763 22.7408L26.0217 22.7408C28.2188 22.7408 29.9998 21.0162 29.9998 18.8889V13.1111C29.9998 10.9838 28.2188 9.25928 26.0217 9.25928L23.7266 9.25928V12.5185C23.7266 14.6459 21.9455 16.3704 19.7485 16.3704L12.4042 16.3704C10.5451 16.3704 9.03809 17.8296 9.03809 19.6296L9.03809 26.1482C9.03809 28.2755 10.8192 30 13.0162 30H18.9834ZM19.9015 25.2593C19.1409 25.2593 18.5244 25.8562 18.5244 26.5926C18.5244 27.329 19.1409 27.9259 19.9015 27.9259C20.662 27.9259 21.2785 27.329 21.2785 26.5926C21.2785 25.8562 20.662 25.2593 19.9015 25.2593Z" fill="url(#paint1_linear_87_8204)"></path> <defs> <linearGradient id="paint0_linear_87_8204" x1="12.4809" y1="2" x2="12.4809" y2="22.7407" gradientUnits="userSpaceOnUse"> <stop stop-color="#327EBD"></stop> <stop offset="1" stop-color="#1565A7"></stop> </linearGradient> <linearGradient id="paint1_linear_87_8204" x1="19.519" y1="9.25928" x2="19.519" y2="30" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFDA4B"></stop> <stop offset="1" stop-color="#F9C600"></stop> </linearGradient> </defs> </g></svg>          </div>
-          <p>Python</p>
-          
-        </div>
-        <div class="skill-card">
-          <div class="card-header">
-            
-<svg width="123px" height="123px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_django</title><path d="M14.135,4H18.1V22.169a26.218,26.218,0,0,1-5.143.535c-4.842-.005-7.362-2.168-7.362-6.322,0-4,2.673-6.6,6.816-6.6a6.448,6.448,0,0,1,1.724.2V4Zm0,9.142a3.992,3.992,0,0,0-1.337-.2c-2,0-3.163,1.223-3.163,3.366,0,2.087,1.107,3.239,3.138,3.239a9.355,9.355,0,0,0,1.362-.1v-6.3Z" style="fill:#44b78b"></path><path d="M24.4,10.059v9.1c0,3.133-.235,4.639-.923,5.938A6.316,6.316,0,0,1,20.237,28l-3.678-1.733A5.708,5.708,0,0,0,19.7,23.638c.566-1.121.745-2.42.745-5.837V10.059Z" style="fill:#44b78b"></path><rect x="20.441" y="4.02" width="3.964" height="4.028" style="fill:#44b78b"></rect></g></svg>          </div>
-          <p>Django</p>
-          
-        </div>
-
-        
-
-        <div class="skill-card">
-          <div class="card-header">
-            
-<svg width="123px" height="123px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_pgsql</title><path d="M29.507,18.773a1.378,1.378,0,0,0-1.144-.921,2.619,2.619,0,0,0-.913.051,8.2,8.2,0,0,1-1.406.185,27.125,27.125,0,0,0,2.872-6.83c.953-3.689.444-5.369-.151-6.13A8.239,8.239,0,0,0,22.121,2a11.773,11.773,0,0,0-3.453.484A12.858,12.858,0,0,0,16.648,2.3a6.565,6.565,0,0,0-3.518.867,16.039,16.039,0,0,0-2.484-.624,7.694,7.694,0,0,0-5.819.924C3.093,4.691,2.289,6.819,2.438,9.792A36.351,36.351,0,0,0,3.844,16.33a22.579,22.579,0,0,0,1.514,3.863A4.786,4.786,0,0,0,7.8,22.742a2.4,2.4,0,0,0,2.379-.516,2.08,2.08,0,0,0,.5.43,3.328,3.328,0,0,0,.944.4,5.069,5.069,0,0,0,3.3-.2c.006.171.011.335.014.477.006.229.013.454.021.665a11.641,11.641,0,0,0,.441,3.3c.016.043.037.107.059.176a3.975,3.975,0,0,0,.991,1.745,2.955,2.955,0,0,0,2.09.777,4.7,4.7,0,0,0,.977-.109A4.592,4.592,0,0,0,22.607,28.1c.811-1.155,1.206-2.894,1.277-5.635.009-.078.018-.152.026-.222l.017-.145.191.017.049,0a7.562,7.562,0,0,0,3.163-.548c.631-.293,2.654-1.361,2.177-2.8"></path><path d="M27.689,19.053c-3.163.652-3.38-.418-3.38-.418C27.648,13.68,29.044,7.39,27.839,5.851c-3.286-4.2-8.975-2.213-9.07-2.162l-.031.006a11.28,11.28,0,0,0-2.11-.22,5.212,5.212,0,0,0-3.34,1S3.14.294,3.612,9.733c.1,2.008,2.878,15.194,6.191,11.211,1.211-1.456,2.381-2.688,2.381-2.688a3.071,3.071,0,0,0,2.006.512l.057-.048a2.21,2.21,0,0,0,.023.567c-.854.954-.6,1.121-2.309,1.472-1.726.356-.712.989-.05,1.155a3.508,3.508,0,0,0,3.915-1.272l-.05.2c.334.268.569,1.742.53,3.079a8.481,8.481,0,0,0,.2,2.971c.264.717.526,2.329,2.769,1.849a3.307,3.307,0,0,0,2.98-3.179c.1-1.234.313-1.052.326-2.155l.174-.522c.2-1.673.032-2.213,1.186-1.962l.281.025a6.4,6.4,0,0,0,2.615-.44c1.406-.652,2.239-1.742.853-1.455h0" style="fill:#336791"></path><path d="M13.882,10.631a.981.981,0,0,0-.674.1.247.247,0,0,0-.1.164.48.48,0,0,0,.117.314.881.881,0,0,0,.559.349.637.637,0,0,0,.09.006.725.725,0,0,0,.687-.467c.035-.248-.326-.414-.676-.463m9.442.008c-.027-.195-.374-.25-.7-.2s-.647.194-.62.389a.667.667,0,0,0,.62.411.592.592,0,0,0,.083-.006.8.8,0,0,0,.451-.247.5.5,0,0,0,.169-.343" style="fill:#ffffff"></path><path d="M28.741,18.979c-.121-.365-.509-.482-1.154-.349-1.915.4-2.6.121-2.826-.044a26.327,26.327,0,0,0,3.373-7.565,14.374,14.374,0,0,0,.5-3.253,3.513,3.513,0,0,0-.509-2.2,7.482,7.482,0,0,0-6.049-2.825,10.363,10.363,0,0,0-3.5.551,8.717,8.717,0,0,0-1.968-.253,5.684,5.684,0,0,0-3.372.929,15.051,15.051,0,0,0-2.74-.718,6.978,6.978,0,0,0-5.242.805c-1.5,1.064-2.2,2.966-2.061,5.653a35.489,35.489,0,0,0,1.373,6.348c1.07,3.505,2.233,5.49,3.457,5.9a1.548,1.548,0,0,0,.491.081,2.049,2.049,0,0,0,1.563-.886q1.042-1.25,2.155-2.438a3.472,3.472,0,0,0,1.55.417l0,.042q-.14.166-.273.338c-.375.475-.452.574-1.658.823-.343.071-1.254.259-1.267.9-.014.7,1.077.991,1.2,1.022a5.144,5.144,0,0,0,1.249.162,3.634,3.634,0,0,0,2.5-.934,23.674,23.674,0,0,0,.381,5.684,2.854,2.854,0,0,0,2.729,2.1,4.378,4.378,0,0,0,.917-.1,3.462,3.462,0,0,0,3.156-3.212c.177-1.026.481-3.475.624-4.789a3.859,3.859,0,0,0,1.11.137,6.6,6.6,0,0,0,2.519-.48c.712-.331,2-1.141,1.763-1.846ZM24.051,10.1a7.968,7.968,0,0,1-.116,1.107,10.229,10.229,0,0,0-.14,1.3,9.859,9.859,0,0,0,.1,1.47,5.236,5.236,0,0,1-.229,2.986,3.882,3.882,0,0,1-.207-.426c-.058-.141-.185-.368-.359-.681-.68-1.22-2.274-4.078-1.458-5.244.243-.347.86-.7,2.408-.512ZM22.174,3.531a6.617,6.617,0,0,1,5.334,2.522c.975,1.245-.1,6.912-3.205,11.8l-.094-.119-.039-.049a5.524,5.524,0,0,0,.506-3.8,9.114,9.114,0,0,1-.1-1.352,9.572,9.572,0,0,1,.131-1.206,7.614,7.614,0,0,0,.123-1.493.619.619,0,0,0,.013-.21,8.381,8.381,0,0,0-1.912-3.6,8.61,8.61,0,0,0-3.039-2.284,10.246,10.246,0,0,1,2.28-.214ZM9.479,20.654c-.627.754-1.061.61-1.2.562-.928-.31-2.006-2.272-2.955-5.384a35.167,35.167,0,0,1-1.34-6.159c-.12-2.4.462-4.074,1.73-4.974,2.063-1.463,5.456-.587,6.819-.143-.02.019-.04.037-.059.057-2.237,2.259-2.184,6.119-2.178,6.355,0,.091.007.22.018.4a15.969,15.969,0,0,1-.081,3.226A4.08,4.08,0,0,0,11.3,18.007q.133.138.278.262c-.383.41-1.216,1.318-2.1,2.385Zm2.39-3.19a3.3,3.3,0,0,1-.865-2.764,16.7,16.7,0,0,0,.087-3.381c-.006-.095-.011-.178-.014-.243A4.3,4.3,0,0,1,14,10.223a1.188,1.188,0,0,1,.918,1.026c.646,2.989.085,4.234-.365,5.235-.093.206-.181.4-.255.6l-.058.156a10.218,10.218,0,0,0-.368,1.109,2.788,2.788,0,0,1-2-.887Zm.113,4.03a1.733,1.733,0,0,1-.523-.225,2.553,2.553,0,0,1,.557-.166c1.418-.292,1.637-.5,2.116-1.105.11-.139.234-.3.406-.489h0c.256-.287.374-.238.586-.15a.829.829,0,0,1,.408.525.585.585,0,0,1-.05.491A3.1,3.1,0,0,1,11.983,21.495ZM19.406,28.4a2.113,2.113,0,0,1-2.754-1.526,31.129,31.129,0,0,1-.3-6.853.392.392,0,0,0-.017-.124,1.643,1.643,0,0,0-.048-.23,1.589,1.589,0,0,0-.862-1.034,1.216,1.216,0,0,0-.793-.1,9.586,9.586,0,0,1,.342-1.022l.058-.157c.066-.177.148-.36.235-.554.471-1.047,1.117-2.482.416-5.722a2.044,2.044,0,0,0-2.468-1.669A5.694,5.694,0,0,0,11.328,10c-.078.04-.15.078-.216.115A8.244,8.244,0,0,1,13.03,5.163,4.711,4.711,0,0,1,16.6,3.827,7.567,7.567,0,0,1,22.381,6.59,8.774,8.774,0,0,1,23.963,9.3c-1.463-.149-2.458.14-2.962.861-1.1,1.568.6,4.612,1.416,6.075.15.268.279.5.319.6a5.432,5.432,0,0,0,.861,1.387c.077.1.152.189.208.271-.443.128-1.239.423-1.166,1.9-.058.74-.474,4.205-.686,5.43-.279,1.617-.874,2.22-2.548,2.579Zm7.242-8.288a5.714,5.714,0,0,1-1.931.4,2.
-  422,2.422,0,0,1-1.3-.167c-.045-.919.3-1.015.66-1.117.057-.016.112-.032.166-.05a1.353
-  ,1.353,0,0,0,.11.08c.639.422,1.78.467,3.39.135l.018,0a4.334,4.334,0,0,1-1.116.72Z"
-   style="fill:#ffffff"></path></g></svg></div>         
-    <p>PostgreSQL</p>
-          
-        </div>
-
-        <div class="skill-card">
-          <div class="card-header">
-            
-<svg width="123px" height="123px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><linearGradient id="a" x1="-645.732" y1="839.188" x2="-654.59" y2="839.25" gradientTransform="matrix(-0.977, -0.323, -0.29, 0.877, -375.944, -928.287)" gradientUnits="userSpaceOnUse"><stop offset="0.231" stop-color="#999875"></stop><stop offset="0.563" stop-color="#9b9977"></stop><stop offset="0.683" stop-color="#a09f7e"></stop><stop offset="0.768" stop-color="#a9a889"></stop><stop offset="0.837" stop-color="#b7b69a"></stop><stop offset="0.896" stop-color="#c9c7b0"></stop><stop offset="0.948" stop-color="#deddcb"></stop><stop offset="0.994" stop-color="#f8f6eb"></stop><stop offset="1" stop-color="#fbf9ef"></stop></linearGradient><linearGradient id="b" x1="-644.287" y1="823.405" x2="-657.028" y2="845.476" gradientTransform="matrix(-0.977, -0.323, -0.29, 0.877, -375.944, -928.287)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#48a547"></stop><stop offset="1" stop-color="#3f9143"></stop></linearGradient><linearGradient id="c" x1="-643.386" y1="839.485" x2="-652.418" y2="833.417" gradientTransform="matrix(-0.977, -0.323, -0.29, 0.877, -375.944, -928.287)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#41a247"></stop><stop offset="0.352" stop-color="#4ba74b"></stop><stop offset="0.956" stop-color="#67b554"></stop><stop offset="1" stop-color="#69b655"></stop></linearGradient></defs><title>file_type_mongo</title><path d="M16.62,30l-.751-.249s.1-3.8-1.275-4.067c-.9-1.048.133-44.741,3.423-.149a2.712,2.712,0,0,0-1.333,1.523A14.1,14.1,0,0,0,16.62,30Z" style="fill:url(#a)"></path><path d="M17.026,26.329a13.223,13.223,0,0,0,5-13.225C20.556,6.619,17.075,4.487,16.7,3.673a9.792,9.792,0,0,1-.825-1.6l.277,18.069S15.578,25.664,17.026,26.329Z" style="fill:url(#b)"></path><path d="M15.487,26.569S9.366,22.4,9.72,15.025A15.54,15.54,0,0,1,15.239,3.377,1.725,1.725,0,0,0,15.846,2c.381.82.319,12.243.359,13.579C16.36,20.776,15.916,25.588,15.487,26.569Z" style="fill:url(#c)"></path></g></svg>     </div>
-     <p>MongoDB</p>
-          
-        </div>
-
-        <div class="skill-card">
-          <div class="card-header">
-            
-<svg width="123px" height="123px" viewBox="-45 0 346 346" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M82.5539491,267.472524 C82.5539491,267.472524 69.35552,275.147869 91.9468218,277.745105 C119.315549,280.867375 133.303389,280.419607 163.463913,274.711273 C163.463913,274.711273 171.393396,279.683258 182.467491,283.989644 C114.855564,312.966982 29.4483782,282.311215 82.5539491,267.472524" fill="#5382A1"> </path> <path d="M74.2921309,229.658996 C74.2921309,229.658996 59.4888145,240.616727 82.0968727,242.955171 C111.333004,245.971316 134.421411,246.218007 174.373236,238.524975 C174.373236,238.524975 179.899113,244.127185 188.588218,247.190807 C106.841367,271.094691 15.79008,249.075898 74.2921309,229.658996" fill="#5382A1"> </path> <path d="M143.941818,165.514705 C160.601367,184.695156 139.564684,201.955142 139.564684,201.955142 C139.564684,201.955142 181.866124,180.117876 162.438982,152.772422 C144.294633,127.271098 130.380335,114.600495 205.706705,70.9138618 C205.706705,70.9138618 87.4691491,100.44416 143.941818,165.514705" fill="#E76F00"> </path> <path d="M233.364015,295.441687 C233.364015,295.441687 243.131113,303.489396 222.60736,309.715316 C183.580858,321.537862 60.1748945,325.107898 25.8932364,310.186356 C13.5698618,304.825251 36.67968,297.385425 43.9491491,295.824291 C51.5304727,294.180305 55.8629236,294.486575 55.8629236,294.486575 C42.15808,284.832116 -32.7195927,313.443607 17.8287709,321.637469 C155.681513,343.993251 269.121164,311.570618 233.364015,295.441687" fill="#5382A1"> </path> <path d="M88.9008873,190.479825 C88.9008873,190.479825 26.1287564,205.389265 66.6717091,210.803433 C83.7901964,213.095331 117.915462,212.576815 149.702284,209.913484 C175.680233,207.722124 201.765236,203.062924 201.765236,203.062924 C201.765236,203.062924 192.605091,206.985775 185.977949,211.510924 C122.233949,228.275665 -0.907636364,220.476509 34.5432436,203.328233 C64.5241018,188.83584 88.9008873,190.479825 88.9008873,190.479825" fill="#5382A1"> </path> <path d="M201.506444,253.422313 C266.305164,219.7504 236.344785,187.392 215.432844,191.751447 C210.307258,192.818269 208.021876,193.742662 208.021876,193.742662 C208.021876,193.742662 209.924655,190.761891 213.558924,189.471651 C254.929455,174.927127 286.746065,232.368873 200.204102,255.11936 C200.204102,255.120291 201.206691,254.223825 201.506444,253.422313" fill="#5382A1"> </path> <path d="M162.438982,0.371432727 C162.438982,0.371432727 198.325527,36.27008 128.402153,91.4720582 C72.3307055,135.753542 115.616116,161.001658 128.37888,189.848669 C95.6490473,160.318371 71.6297309,134.322735 87.7437673,110.128407 C111.395375,74.6132945 176.918342,57.3942691 162.438982,0.371432727" fill="#E76F00"> </path> <path d="M95.2683055,344.665367 C157.466996,348.646865 252.980131,342.45632 255.24224,313.025629 C255.24224,313.025629 250.893964,324.182575 203.838371,333.042967 C150.750487,343.033484 85.2740655,341.867055 46.4393309,335.464262 C46.4402618,335.463331 54.3892945,342.043927 95.2683055,344.665367" fill="#5382A1"> </path> </g> </g></svg> </div>
-            <p>Java</p>
-          
-        </div>
-
-        
-
-
-        <!-- Add more skill cards here -->
-
-      </div>
     </section>
 
-<section id="projects" class="section">
- <h2>Projects</h2>
-  
-</section>
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-year">2024 - 2027</div>
+                    <div class="education-content">
+                        <h3 class="education-qualification">Bachelor of Science (AI & DS)</h3>
+                        <div class="education-institution">Rathinam College of Arts and Science</div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-year">2022 - 2024</div>
+                    <div class="education-content">
+                        <h3 class="education-qualification">HSC - 69%</h3>
+                        <div class="education-institution">Devanga Hr Sec School</div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-year">2021 - 2022</div>
+                    <div class="education-content">
+                        <h3 class="education-qualification">SSLC - 70%</h3>
+                        <div class="education-institution">Sri Visweswara Vidyalaya Matric Hr Sec School</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="certificates" class="section">
-  <h2>Certificates</h2>
-  <div class="skill-cards">
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item" data-skill="85">
+                    <div class="skill-header">
+                        <span class="skill-name">HTML</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="80">
+                    <div class="skill-header">
+                        <span class="skill-name">CSS</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="50">
+                    <div class="skill-header">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="70">
+                    <div class="skill-header">
+                        <span class="skill-name">Django Framework</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="70">
+                    <div class="skill-header">
+                        <span class="skill-name">PostgreSQL</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="70">
+                    <div class="skill-header">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="50">
+                    <div class="skill-header">
+                        <span class="skill-name">MongoDB</span>
+                        <span class="skill-percentage">50%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" data-skill="20">
+                    <div class="skill-header">
+                        <span class="skill-name">Java</span>
+                        <span class="skill-percentage">20%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Card 1 -->
-    <div class="card">
-      <div class="card-details">
-        <p class="text-title">College Event Website</p>
-      </div>
-      <button class="card-button" data-modal="popupModal1">More info</button>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="card-no-left">1)</div>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">College Event Website</h3>
+                        <p class="project-description">Developed a website for a college event with multiple event categories and registration forms. Implemented user-friendly UI for event details, schedules, and registration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="card-no-left">2)</div>
+                    <div class="project-content">
+                        <h3 class="project-title">CampNotes</h3>
+                        <p class="project-description">Built a department-level web application where staff can upload notes and students can instantly access and download them, streamlining academic resource sharing.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="card-no-left">3)</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio (This Website)</h3>
+                        <p class="project-description">Created a responsive and interactive portfolio website to highlight my skills, projects, education, and certifications, with smooth animations and a user-friendly interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-    <!-- Card 2 -->
-    <div class="card">
-      <div class="card-details">
-        <p class="text-title">Portfolio Website</p>
-      </div>
-      <button class="card-button" data-modal="popupModal2">More info</button>
-    </div>
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certificates & Workshops</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certificates-content">
+                <div class="certificates-list">
+                    <h3>Certificates</h3>
+                    <div class="certificates-grid">
+                        <div class="certificate-item">
+                            <div class="certificate-text">Data Science - IBM</div>
+                        </div>
+                        <div class="certificate-item">
+                            <div class="certificate-text">Git GitHub - Google</div>
+                        </div>
+                        <div class="certificate-item">
+                            <div class="certificate-text">Programming with JavaScript - Meta</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="workshop-section">
+                    <h3>Workshop</h3>
+                    <div class="workshop-card">
+                        <h4>Mastering Generative AI – IISc Bangalore</h4>
+                        <p>Attended hands-on Gen AI Workshop at IISc Bangalore, with advanced concepts in Gen AI and real-world applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:vibind007@gmail.com">vibind007@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <a href="tel:+918608322120">+91 8608322120</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <span>653, Telugu Street, Coimbatore – 641001</span>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/vibin-d-b612b3522" target="_blank">linkedin.com/in/vibin-d-b612b3522</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Vibin-007" target="_blank">github.com/Vibin-007</a>
+                    </div>
+                </div>
+                
+                <!-- <div class="contact-form-wrapper"> -->
+                    <!-- <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                            <span class="form-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading">Sending...</span>
+                        </button>
+                    </form> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
 
-  <!-- Modal 1 -->
-  <div id="popupModal1" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>College Event Website</h2>
-      <p>This is detailed info about the college event website project.</p>
-    </div>
-  </div>
+    <!-- Footer -->
+    
 
-  <!-- Modal 2 -->
-  <div id="popupModal2" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Portfolio Website</h2>
-      <p>This is detailed info about your personal portfolio website.</p>
-    </div>
-  </div>
-<script>
-// Open modal
-document.querySelectorAll(".card-button").forEach(button => {
-  button.addEventListener("click", () => {
-    const modalId = button.getAttribute("data-modal");
-    const modal = document.getElementById(modalId);
-    modal.style.display = "block";
-  });
-});
-
-// Close modal
-document.querySelectorAll(".modal").forEach(modal => {
-  const closeBtn = modal.querySelector(".close");
-  
-  closeBtn.onclick = () => {
-    modal.style.display = "none";
-  };
-
-  window.onclick = (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  };
-});
-
-
-</script>
-  <p>
-    • Data Science – IBM<br>
-    • Power BI – CFI<br>
-    • Git and GitHub – Google<br>
-    • Programming with JavaScript – Meta
-  </p>
-</section>
-
-<section id="workshop" class="section">
-  <h2>Workshop</h2>
-  <p>
-    <strong>Mastering Generative AI – IISc Bangalore</strong><br>
-    Attended the Gen AI Workshop at IISc Bangalore, gaining hands-on experience and in-depth understanding of foundational and advanced concepts in Generative AI and its real-world applications.
-  </p>
-</section>
-
-
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>
-    <strong>Phone:</strong> +91 8608827120<br>
-    <strong>Email:</strong> vibind007@gmail.com<br>
-    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vibin-d-612b63252a" target="_blank">linkedin.com/in/vibin-d</a><br>
-    <strong>GitHub:</strong> <a href="https://github.com/Vibin-007" target="_blank">github.com/Vibin-007</a>
-  </p>
-</section>
-
-
-
-
-  </div>
-
-  <footer>
-    <h1>hi</h1>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
