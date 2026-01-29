@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vibin - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
+
 <body>
-<!-- <div class="cursor-follower" id="cursorFollower">
+    <div class="cursor-follower" id="cursorFollower">
         <div class="cursor-name" id="cursorName"></div>
-    </div> -->
+    </div>
+    <div class="bg-section-text" id="bgSectionText">HOME</div>
+
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar"></div>
     <!-- Loading Screen -->
     <div id="loader" class="loader">
         <div class="loader-content">
@@ -21,34 +37,38 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav container">
-            
+
             <ul class="nav-menu">
                 <li><a href="#hero" class="nav-link" id="home">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
+
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certificates" class="nav-link">Certificates</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+
+                <li><a href="#contact" class="nav-link">Connect</a></li>
+
             </ul>
-            
+
             <!-- Dark Mode Toggle -->
             <div class="theme-toggle-container">
                 <button class="theme-toggle hidden" id="themeToggle" aria-label="Toggle dark mode">
                     <span class="toggle-track">
                         <span class="toggle-thumb">
-                            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="5"/>
-                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="5" />
+                                <path
+                                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                             </svg>
-                            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                             </svg>
                         </span>
                     </span>
                 </button>
             </div>
-            
+
             <!-- Mobile Menu Toggle -->
             <div class="nav-toggle" id="navToggle">
                 <span></span>
@@ -69,9 +89,10 @@
                 <h1 class="hero-title">
                     VIBIN D
                 </h1>
-                <p class="hero-description">Passionate about coding and web development, seeking opportunities to apply skills, learn new technologies, and grow as a developer</p>
+                <p class="hero-description"><span class="typing-text"></span></p>
                 <div class="hero-buttons">
-                    <a href="Vibin_Resume.pdf" target="_blank" class="btn btn--primary" style="color: black;">View Resume</a>
+                    <a href="Vibin_Resume.pdf" target="_blank" class="btn btn--primary" style="color: black;">View
+                        Resume</a>
                     <a href="#contact" class="btn btn--primary" style="color: black;">Get In Touch</a>
                 </div>
                 <div class="hero-contact">
@@ -85,6 +106,15 @@
         </div> -->
     </section>
 
+    <!-- Wave Divider -->
+    <div class="custom-shape-divider-bottom-1689945000">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"></path>
+        </svg>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
@@ -93,9 +123,15 @@
                 <div class="section-line"></div>
             </div>
             <div class="about-content">
+
                 <div class="about-text">
                     <p class="about-description">
-                        As a passionate Computer Science student with a focus on coding and web development, I seek opportunities to apply my skills, learn new technologies, and grow as a developer. I am eager to contribute to innovative projects and gain hands-on experience in real-world applications.
+                        I am an explorer of the digital frontier. My journey isn't just about syntax—it's about
+                        <strong>solving real-world puzzles</strong>. From mining insights in massive datasets to
+                        crafting pixel-perfect interfaces, I build solutions that <span
+                            style="color: var(--color-primary)">matter</span>. I bridge the gap between robust software
+                        engineering and advanced data science, creating applications that are not only functional but
+                        intelligent.
                     </p>
                     <div class="languages-section">
                         <h3>Languages</h3>
@@ -109,38 +145,7 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Education</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-year">2024 - 2027</div>
-                    <div class="education-content">
-                        <h3 class="education-qualification">Bachelor of Science (AI & DS)</h3>
-                        <div class="education-institution">Rathinam College of Arts and Science</div>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2022 - 2024</div>
-                    <div class="education-content">
-                        <h3 class="education-qualification">HSC - 69%</h3>
-                        <div class="education-institution">Devanga Hr Sec School</div>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2021 - 2022</div>
-                    <div class="education-content">
-                        <h3 class="education-qualification">SSLC - 70%</h3>
-                        <div class="education-institution">Sri Visweswara Vidyalaya Matric Hr Sec School</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
@@ -149,78 +154,169 @@
                 <h2 class="section-title">Skills & Expertise</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="skills-grid">
-                <div class="skill-item" data-skill="85">
-                    <div class="skill-header">
-                        <span class="skill-name">HTML</span>
-                        <span class="skill-percentage">85%</span>
+            <div class="skills-container">
+                <!-- Python -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-python-plain"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
-                    </div>
+                    <span class="tech-name">Python</span>
                 </div>
-                <div class="skill-item" data-skill="80">
-                    <div class="skill-header">
-                        <span class="skill-name">CSS</span>
-                        <span class="skill-percentage">80%</span>
+
+                <!-- Java -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-java-plain"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
-                    </div>
+                    <span class="tech-name">Java</span>
                 </div>
-                <div class="skill-item" data-skill="50">
-                    <div class="skill-header">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-percentage">70%</span>
+
+                <!-- HTML5 -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-html5-plain"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
-                    </div>
+                    <span class="tech-name">HTML5</span>
                 </div>
-                <div class="skill-item" data-skill="70">
-                    <div class="skill-header">
-                        <span class="skill-name">Django Framework</span>
-                        <span class="skill-percentage">75%</span>
+
+                <!-- CSS3 -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-css3-plain"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
-                    </div>
+                    <span class="tech-name">CSS3</span>
                 </div>
-                <div class="skill-item" data-skill="70">
-                    <div class="skill-header">
-                        <span class="skill-name">PostgreSQL</span>
-                        <span class="skill-percentage">70%</span>
+
+                <!-- JavaScript -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-javascript-plain"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
-                    </div>
+                    <span class="tech-name">JavaScript</span>
                 </div>
-                <div class="skill-item" data-skill="70">
-                    <div class="skill-header">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-percentage">70%</span>
+
+                <!-- Django -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-django-plain"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
-                    </div>
+                    <span class="tech-name">Django</span>
                 </div>
-                <div class="skill-item" data-skill="50">
-                    <div class="skill-header">
-                        <span class="skill-name">MongoDB</span>
-                        <span class="skill-percentage">50%</span>
+
+                <!-- Flask -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-flask-original"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
-                    </div>
+                    <span class="tech-name">Flask</span>
                 </div>
-                
-                <div class="skill-item" data-skill="20">
-                    <div class="skill-header">
-                        <span class="skill-name">Java</span>
-                        <span class="skill-percentage">20%</span>
+
+                <!-- PostgreSQL -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-postgresql-plain"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress"></div>
+                    <span class="tech-name">PostgreSQL</span>
+                </div>
+
+                <!-- MySQL -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-mysql-plain"></i>
+                    </div>
+                    <span class="tech-name">MySQL</span>
+                </div>
+
+                <!-- MongoDB -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="devicon-mongodb-plain"></i>
+                    </div>
+                    <span class="tech-name">MongoDB</span>
+                </div>
+            </div>
+
+            <div class="ds-section">
+                <h3>Data Science & Machine Learning</h3>
+                <div class="ds-container">
+                    <!-- Supervised Learning -->
+                    <div class="ds-card">
+                        <div class="ds-icon">
+                            <span class="material-symbols-outlined">model_training</span>
+                        </div>
+                        <div class="ds-content">
+                            <h4>Supervised Learning</h4>
+                            <div class="ds-tags">
+                                <span>Regression</span>
+                                <span>Classification</span>
+                                <span>Decision Trees</span>
+                                <span>SVM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unsupervised Learning -->
+                    <div class="ds-card">
+                        <div class="ds-icon">
+                            <span class="material-symbols-outlined">hub</span>
+                        </div>
+                        <div class="ds-content">
+                            <h4>Unsupervised Learning</h4>
+                            <div class="ds-tags">
+                                <span>Clustering</span>
+                                <span>K-Means</span>
+                                <span>DBSCAN</span>
+                                <span>PCA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model Evaluation -->
+                    <div class="ds-card">
+                        <div class="ds-icon">
+                            <span class="material-symbols-outlined">analytics</span>
+                        </div>
+                        <div class="ds-content">
+                            <h4>Model Evaluation</h4>
+                            <div class="ds-tags">
+                                <span>Accuracy</span>
+                                <span>Precision</span>
+                                <span>Recall</span>
+                                <span>R² Score</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Preprocessing -->
+                    <div class="ds-card">
+                        <div class="ds-icon">
+                            <span class="material-symbols-outlined">cleaning_services</span>
+                        </div>
+                        <div class="ds-content">
+                            <h4>Data Preprocessing</h4>
+                            <div class="ds-tags">
+                                <span>Cleaning</span>
+                                <span>Encoding</span>
+                                <span>Scaling</span>
+                                <span>Imputation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libraries -->
+                    <div class="ds-card">
+                        <div class="ds-icon">
+                            <span class="material-symbols-outlined">library_books</span>
+                        </div>
+                        <div class="ds-content">
+                            <h4>Libraries</h4>
+                            <div class="ds-tags">
+                                <span>NumPy</span>
+                                <span>Pandas</span>
+                                <span>Scikit-learn</span>
+                                <span>Matplotlib</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,13 +331,15 @@
                 <div class="section-line"></div>
             </div>
             <div class="projects-grid">
-                
+
                 <div class="project-card">
                     <div class="card-no-left">1)</div>
-                    
+
                     <div class="project-content">
                         <h3 class="project-title">College Event Website</h3>
-                        <p class="project-description">Developed a website for a college event with multiple event categories and registration forms. Implemented user-friendly UI for event details, schedules, and registration.</p>
+                        <p class="project-description">Developed a responsive website for a college event with multiple
+                            event categories, registration forms. Implemented user-friendly UI for event details,
+                            schedules, and registration forms.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -251,15 +349,17 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="projects-grid">
-                
+
                 <div class="project-card">
                     <div class="card-no-left">2)</div>
                     <div class="project-content">
                         <h3 class="project-title">CampNotes</h3>
-                        <p class="project-description">Built a department-level web application where staff can upload notes and students can instantly access and download them, streamlining academic resource sharing.</p>
+                        <p class="project-description">Developed a department-level web application for sharing academic
+                            notes among staff and students. Implemented secure upload and instant download features with
+                            role-based access control.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -268,17 +368,19 @@
                             <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
-                    
+
                 </div>
-                
+
             </div>
             <div class="projects-grid">
-                
+
                 <div class="project-card">
                     <div class="card-no-left">3)</div>
                     <div class="project-content">
                         <h3 class="project-title">Portfolio (This Website)</h3>
-                        <p class="project-description">Created a responsive and interactive portfolio website to highlight my skills, projects, education, and certifications, with smooth animations and a user-friendly interface.</p>
+                        <p class="project-description">Created a responsive and interactive portfolio website to
+                            highlight my skills, projects, education, and certifications, with smooth animations and a
+                            user-friendly interface.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -286,45 +388,12 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Certificates & Workshops</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="certificates-content">
-                <div class="certificates-list">
-                    <h3>Certificates</h3>
-                    <div class="certificates-grid">
-                        <div class="certificate-item">
-                            <div class="certificate-text">Data Science - IBM</div>
-                        </div>
-                        <div class="certificate-item">
-                            <div class="certificate-text">Git GitHub - Google</div>
-                        </div>
-                        <div class="certificate-item">
-                            <div class="certificate-text">Programming with JavaScript - Meta</div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="workshop-section">
-                    <h3>Workshop</h3>
-                    <div class="workshop-card">
-                        <h4>Mastering Generative AI – IISc Bangalore</h4>
-                        <p>Attended hands-on Gen AI Workshop at IISc Bangalore, with advanced concepts in Gen AI and real-world applications.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -333,64 +402,89 @@
                 <h2 class="section-title">Let's Connect</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>Email</h3>
-                        <a href="mailto:vibind007@gmail.com">vibind007@gmail.com</a>
+            <div class="contact-hub">
+                <!-- Status Card -->
+
+
+                <div class="contact-grid">
+                    <!-- Phone Card -->
+                    <div class="contact-card interactive-card animate-on-scroll">
+                        <div class="card-icon">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div class="card-info">
+                            <span>Phone</span>
+                            <a href="tel:+918608322120">+91 8608322120</a>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <h3>Phone</h3>
-                        <a href="tel:+918608322120">+91 8608322120</a>
+                    <!-- Email Card -->
+                    <div class="contact-card interactive-card animate-on-scroll">
+                        <div class="card-icon">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div class="card-info">
+                            <span>Email</span>
+                            <a href="mailto:vibind007@gmail.com" id="emailLink">vibind007@gmail.com</a>
+                        </div>
+                        <button class="copy-btn" id="copyEmail" aria-label="Copy email">
+                            <span class="material-symbols-outlined">content_copy</span>
+                            <span class="tooltip">Copy</span>
+                        </button>
                     </div>
-                    <div class="contact-item">
-                        <h3>Location</h3>
-                        <span>653, Telugu Street, Coimbatore – 641001</span>
-                    </div>
-                    <div class="contact-item">
-                        <h3>LinkedIn</h3>
-                        <a href="https://linkedin.com/in/vibin-d-b612b3522" target="_blank">linkedin.com/in/vibin-d-b612b3522</a>
-                    </div>
-                    <div class="contact-item">
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/Vibin-007" target="_blank">github.com/Vibin-007</a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://linkedin.com/in/vibin-d-b612b3522" target="_blank"
+                        class="contact-card interactive-card animate-on-scroll">
+                        <div class="card-icon">
+                            <i class="devicon-linkedin-plain"></i>
+                        </div>
+                        <div class="card-info">
+                            <span>LinkedIn</span>
+                            <p>vibin-d-b612b3522</p>
+                        </div>
+                        <div class="external-link">
+                            <span class="material-symbols-outlined">north_east</span>
+                        </div>
+                    </a>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/Vibin-007" target="_blank"
+                        class="contact-card interactive-card animate-on-scroll">
+                        <div class="card-icon">
+                            <i class="devicon-github-original"></i>
+                        </div>
+                        <div class="card-info">
+                            <span>GitHub</span>
+                            <p>Vibin-007</p>
+                        </div>
+                        <div class="external-link">
+                            <span class="material-symbols-outlined">north_east</span>
+                        </div>
+                    </a>
+
+
+
+                    <!-- Location Card -->
+                    <div class="contact-card interactive-card animate-on-scroll">
+                        <div class="card-icon">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div class="card-info">
+                            <span>Location</span>
+                            <p>Coimbatore, Tamil Nadu</p>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- <div class="contact-form-wrapper"> -->
-                    <!-- <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email *</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-                            <span class="form-error"></span>
-                        </div>
-                        <button type="submit" class="btn btn--primary btn--full-width">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-loading">Sending...</span>
-                        </button>
-                    </form> -->
-                <!-- </div> -->
             </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    
+    <!-- Professional Footer -->
+
+
 
     <script src="app.js"></script>
 </body>
+
 </html>
