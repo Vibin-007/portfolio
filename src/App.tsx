@@ -9,8 +9,6 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Workshops from './components/Workshops';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
-
 function App() {
   const [loaderDone, setLoaderDone] = useState(false);
 
@@ -28,7 +26,6 @@ function App() {
         <Workshops />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }
