@@ -21,7 +21,7 @@ export default function Loader({ onDone }: LoaderProps) {
     return (
         <div
             ref={ref}
-            className="fixed inset-0 bg-paper z-[10000] flex flex-col items-center justify-center gap-6 transition-opacity duration-600"
+            className="fixed inset-0 bg-white z-[10000] flex flex-col items-center justify-center gap-6 transition-opacity duration-600"
         >
             <div className="relative w-24 h-24 flex items-center justify-center">
                 {/* Hand-drawn spinning circles */}

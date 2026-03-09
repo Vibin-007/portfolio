@@ -29,7 +29,7 @@ export default function Nav() {
 
     return (
         <nav
-            className={`fixed left-1/2 -translate-x-1/2 z-50 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 px-6 pt-3 pb-2 transition-all duration-300 w-[90vw] max-w-lg md:max-w-max md:w-max ${scrolled || menuOpen ? 'top-4 bg-paper border-wobbly shadow-hard border-2 border-ink' : 'top-6 bg-paper md:bg-transparent border-wobbly shadow-hard border-2 border-ink md:border-none md:shadow-none'
+            className={`fixed left-1/2 -translate-x-1/2 z-50 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 px-6 pt-3 pb-2 transition-all duration-300 w-[90vw] max-w-lg md:max-w-max md:w-max ${scrolled || menuOpen ? 'top-4 bg-white border-wobbly shadow-hard border-2 border-ink' : 'top-6 bg-white md:bg-transparent border-wobbly shadow-hard border-2 border-ink md:border-none md:shadow-none'
                 }`}
         >
             <div className="flex items-center justify-between w-full md:w-auto">

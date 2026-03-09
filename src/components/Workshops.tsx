@@ -42,7 +42,7 @@ export default function Workshops() {
 
                             <div className="flex flex-wrap gap-3 mt-auto pt-4">
                                 {w.tools.map(t => (
-                                    <span key={t} className="inline-block px-4 py-1 border-2 border-ink border-wobbly-sm bg-[#ffffff] font-body font-bold text-ink shadow-hard-sm -rotate-1">
+                                    <span key={t} className="inline-block px-4 py-1 border-2 border-ink border-wobbly-sm bg-white font-body font-bold text-ink shadow-hard-sm -rotate-1">
                                         {t}
                                     </span>
                                 ))}
@@ -52,7 +52,7 @@ export default function Workshops() {
                 </div>
 
                 {/* Certificates */}
-                <div className="bg-[#ffffff] border-4 border-ink border-wobbly p-8 shadow-hard rotate-1 max-w-3xl mx-auto">
+                <div className="bg-white border-4 border-ink border-wobbly p-8 shadow-hard rotate-1 max-w-3xl mx-auto">
                     <h3 className="font-heading text-3xl font-bold text-ink mb-6 pb-2 border-b-4 border-dashed border-ink/20 text-center">
                         {certsTitle}
                     </h3>

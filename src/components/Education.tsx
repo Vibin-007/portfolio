@@ -34,7 +34,7 @@ export default function Education() {
                                 <div className="bg-white border-4 border-ink border-wobbly p-6 md:p-8 shadow-hard flex-1 relative group-hover:-translate-y-1 transition-transform duration-300">
                                     <h3 className="font-heading text-2xl md:text-3xl font-bold text-ink mb-2">{item.degree}</h3>
                                     <p className="font-body text-xl text-ink/70 mb-4">{item.school}</p>
-                                    <span className="inline-block px-4 py-1 border-2 border-ink border-wobbly-sm bg-[#ffffff] font-body font-bold shadow-hard-sm -rotate-1">
+                                    <span className="inline-block px-4 py-1 border-2 border-ink border-wobbly-sm bg-white font-body font-bold shadow-hard-sm -rotate-1">
                                         {item.period}
                                     </span>
                                 </div>

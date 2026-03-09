@@ -52,7 +52,7 @@ export default function Contact() {
                                 href={c.href}
                                 target={c.href.startsWith('http') ? '_blank' : undefined}
                                 rel="noopener noreferrer"
-                                className={`flex items-center gap-4 p-4 border-2 border-transparent hover:border-ink hover:border-wobbly-sm hover:bg-[#f0f4f8] transition-colors cursor-none group/link ${c.label === 'Email' ? 'hidden sm:flex' : ''}`}
+                                className={`flex items-center gap-4 p-4 border-2 border-transparent hover:border-ink hover:border-wobbly-sm hover:bg-white transition-colors cursor-none group/link ${c.label === 'Email' ? 'hidden sm:flex' : ''}`}
                             >
                                 <div className="w-12 h-12 rounded-full border-2 border-ink flex items-center justify-center bg-white shadow-hard-sm group-hover/link:-translate-y-1 transition-transform shrink-0">
                                     {c.devicon

@@ -29,7 +29,7 @@ export default function About() {
                             <div className="w-2 h-2 bg-white/50 rounded-full translate-x-[1px]" />
                         </div>
 
-                        <div className="bg-[#ffffff] border-4 border-ink border-wobbly-sm p-8 text-center shadow-hard rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300">
+                        <div className="bg-white border-4 border-ink border-wobbly-sm p-8 text-center shadow-hard rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300">
                             <div className="w-32 h-32 mx-auto rounded-full border-4 border-ink border-wobbly bg-white flex items-center justify-center mb-6 shadow-hard-sm overflow-hidden">
                                 <img
                                     src={profileImage}
