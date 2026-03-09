@@ -11,11 +11,15 @@ export default function Nav() {
     useEffect(() => {
         const onScroll = () => {
             setScrolled(window.scrollY > 40);
-            const found = sections.find(id => {
+
+            // Re-include 'hero' specifically for visibility checking
+            const allSections = ['hero', ...sections];
+            const found = allSections.find(id => {
                 const el = document.getElementById(id);
                 if (!el) return false;
                 const { top, bottom } = el.getBoundingClientRect();
-                return top <= 120 && bottom >= 120;
+                // Adding a bit more tolerance so it switches gracefully
+                return top <= 200 && bottom >= 200;
             });
             if (found) setActive(found);
         };
