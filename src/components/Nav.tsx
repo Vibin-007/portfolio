@@ -4,7 +4,7 @@ import { navData } from '../data/portfolioData';
 const { sections, initials } = navData;
 
 export default function Nav() {
-    const [active, setActive] = useState('about');
+    const [active, setActive] = useState('hero');
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
