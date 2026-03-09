@@ -41,7 +41,7 @@ export default function Skills() {
                             <div className="grid grid-cols-3 sm:grid-cols-4 gap-6">
                                 {skills.map((s, i) => (
                                     <div key={s.label} className={`flex flex-col items-center gap-2 group/icon ${i % 2 === 0 ? 'mt-3' : ''}`}>
-                                        <div className="w-16 h-16 border-2 border-ink border-wobbly flex items-center justify-center bg-paper shadow-hard-sm group-hover/icon:bg-accent group-hover/icon:-translate-y-2 group-hover/icon:shadow-hard transition-all duration-300">
+                                        <div className="w-16 h-16 border-2 border-ink border-wobbly flex items-center justify-center bg-white shadow-hard-sm group-hover/icon:bg-accent group-hover/icon:-translate-y-2 group-hover/icon:shadow-hard transition-all duration-300">
                                             <i className={`${s.icon} text-3xl text-ink group-hover/icon:text-white transition-colors`} />
                                         </div>
                                         <span className="font-body text-l font-bold text-ink text-center">{s.label}</span>
@@ -61,7 +61,7 @@ export default function Skills() {
                             <div className="w-1.5 h-1.5 bg-white/50 rounded-full translate-x-[1px]" />
                         </div>
 
-                        <div className="bg-[#f0f4f8] border-4 border-ink border-wobbly-md p-8 h-full shadow-hard rotate-1 group-hover:rotate-0 transition-transform duration-300">
+                        <div className="bg-white border-4 border-ink border-wobbly-md p-8 h-full shadow-hard rotate-1 group-hover:rotate-0 transition-transform duration-300">
                             <h3 className="flex items-center gap-3 font-heading text-3xl font-bold text-ink mb-8 border-b-4 border-dashed border-ink/20 pb-4">
                                 <span className="material-symbols-outlined text-4xl text-accent">psychology</span>
                                 {mlTitle}

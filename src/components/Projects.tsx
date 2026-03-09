@@ -34,7 +34,7 @@ export default function Projects() {
 
                                 <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t-2 border-dashed border-ink/20">
                                     {p.tech.map(t => (
-                                        <span key={t} className="px-3 py-1 border-2 border-ink border-wobbly-sm bg-paper text-sm font-bold font-body text-ink shadow-hard-sm hover:-translate-y-1 transition-transform cursor-none">
+                                        <span key={t} className="px-3 py-1 border-2 border-ink border-wobbly-sm bg-white text-sm font-bold font-body text-ink shadow-hard-sm hover:-translate-y-1 transition-transform cursor-none">
                                             {t}
                                         </span>
                                     ))}

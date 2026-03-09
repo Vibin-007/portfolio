@@ -15,7 +15,7 @@ export default function Hero() {
 
                 {/* Text Content */}
                 <div className="text-center md:text-left relative">
-                    <div className="inline-block bg-muted px-4 py-1 border-2 border-ink border-wobbly-sm shadow-hard-sm mb-2 rotate-2">
+                    <div className="inline-block bg-white px-4 py-1 border-2 border-ink border-wobbly-sm shadow-hard-sm mb-2 rotate-2">
                         <p className="font-body font-bold text-ink uppercase tracking-widest text-sm">
                             {badge}
                         </p>
@@ -58,7 +58,7 @@ export default function Hero() {
                             <span className="material-symbols-outlined group-hover:rotate-12 transition-transform">arrow_forward</span>
                         </a>
 
-                        <a href={secondaryButton.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-muted border-4 border-ink border-wobbly px-8 py-3 font-body font-bold text-xl text-ink shadow-hard hover:bg-accent hover:text-white hover:shadow-hard-sm hover:translate-x-1 hover:translate-y-1 active:shadow-none active:translate-x-2 active:translate-y-2 transition-all group">
+                        <a href={secondaryButton.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border-4 border-ink border-wobbly px-8 py-3 font-body font-bold text-xl text-ink shadow-hard hover:bg-accent hover:text-white hover:shadow-hard-sm hover:translate-x-1 hover:translate-y-1 active:shadow-none active:translate-x-2 active:translate-y-2 transition-all group">
                             <span>{secondaryButton.text}</span>
                             <span className="material-symbols-outlined group-hover:-rotate-12 transition-transform">description</span>
                         </a>

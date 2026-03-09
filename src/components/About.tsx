@@ -76,14 +76,14 @@ export default function About() {
 
                             <div className="mt-8 flex flex-wrap gap-3">
                                 {tags.map((tag, idx) => (
-                                    <span key={tag} className={`inline-block border-2 border-ink px-4 py-2 font-body font-bold text-lg bg-paper shadow-hard-sm ${idx % 2 === 0 ? 'rotate-1 border-wobbly' : '-rotate-1 border-wobbly-sm'}`}>
+                                    <span key={tag} className={`inline-block border-2 border-ink px-4 py-2 font-body font-bold text-lg bg-white shadow-hard-sm ${idx % 2 === 0 ? 'rotate-1 border-wobbly' : '-rotate-1 border-wobbly-sm'}`}>
                                         {tag}
                                     </span>
                                 ))}
                             </div>
 
                             <div className="mt-10 inline-block relative group">
-                                <a href={resumeButton.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-muted border-4 border-ink border-wobbly px-6 py-3 font-body font-bold text-xl text-ink shadow-hard hover:bg-accent hover:text-white hover:shadow-hard-sm hover:translate-x-1 hover:translate-y-1 active:shadow-none active:translate-x-2 active:translate-y-2 transition-all">
+                                <a href={resumeButton.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border-4 border-ink border-wobbly px-6 py-3 font-body font-bold text-xl text-ink shadow-hard hover:bg-accent hover:text-white hover:shadow-hard-sm hover:translate-x-1 hover:translate-y-1 active:shadow-none active:translate-x-2 active:translate-y-2 transition-all">
                                     <span>{resumeButton.text}</span>
                                     <span className="material-symbols-outlined">download</span>
                                 </a>
