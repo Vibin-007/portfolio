@@ -22,7 +22,7 @@ export default function Workshops() {
                 {/* Workshops */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
                     {workshops.map((w, i) => (
-                        <div key={w.title} className={`relative flex flex-col bg-white border-4 border-ink border-wobbly-md p-8 shadow-hard-lg group ${i % 2 === 0 ? '-rotate-1 hover:-rotate-0' : 'rotate-1 hover:rotate-0'} transition-transform duration-300`}>
+                        <div key={w.title} className={`relative flex flex-col border-4 border-ink border-wobbly-md p-8 shadow-hard-lg group ${i % 2 === 0 ? '-rotate-1 hover:-rotate-0' : 'rotate-1 hover:rotate-0'} transition-transform duration-300`}>
                             {/* Pin */}
                             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-6 h-6 bg-accent rounded-full border-2 border-ink shadow-[2px_2px_0_0_#2d2d2d] z-20 flex items-center justify-center">
                                 <div className="w-1.5 h-1.5 bg-white/50 rounded-full translate-x-[1px]" />
@@ -52,7 +52,7 @@ export default function Workshops() {
                 </div>
 
                 {/* Certificates */}
-                <div className="bg-white border-4 border-ink border-wobbly p-8 shadow-hard rotate-1 max-w-3xl mx-auto">
+                <div className="border-4 border-ink border-wobbly p-8 shadow-hard rotate-1 max-w-3xl mx-auto">
                     <h3 className="font-heading text-3xl font-bold text-ink mb-6 pb-2 border-b-4 border-dashed border-ink/20 text-center">
                         {certsTitle}
                     </h3>
