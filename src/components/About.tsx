@@ -4,7 +4,7 @@ export default function About() {
     const { title, subtitle, profileImage, initials, name, role, location, email, githubUrl, githubLabel, linkedinUrl, linkedinLabel, storyTitle, paragraphs, tags, resumeButton } = aboutData;
 
     return (
-        <section id="about" className="pt-16 pb-24 px-6 relative scroll-mt-8">
+        <section id="about" className="pt-24 md:pt-16 pb-24 px-6 relative scroll-mt-16 md:scroll-mt-8">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-16 relative inline-block mx-auto w-full">
                     {/* Wavy underline decoration */}
