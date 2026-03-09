@@ -33,7 +33,7 @@ export default function Nav() {
                 }`}
         >
             <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#hero" className="font-heading font-bold text-3xl tracking-wide text-ink no-underline hover:-rotate-2 transition-transform">
+                <a href="#hero" className="font-heading font-bold text-3xl tracking-wide text-ink no-underline hover:-rotate-2 transition-transform translate-y-1">
                     {initials}<span className="text-accent">.</span>
                 </a>
 
