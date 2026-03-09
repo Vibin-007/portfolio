@@ -15,14 +15,14 @@ export default function Hero() {
 
                 {/* Text Content */}
                 <div className="text-center md:text-left relative">
-                    <div className="inline-block bg-white px-4 py-1 border-2 border-ink border-wobbly-sm shadow-hard-sm mb-2 rotate-2">
-                        <p className="font-body font-bold text-ink uppercase tracking-widest text-sm">
+                    <div className="inline-block bg-white px-6 py-2 md:px-4 md:py-1 border-2 border-ink border-wobbly-sm shadow-hard-sm mb-4 md:mb-2 rotate-2">
+                        <p className="font-body font-bold text-ink uppercase tracking-widest text-base md:text-sm">
                             {badge}
                         </p>
                     </div>
 
                     {/* Mobile Only Profile Image */}
-                    <div className="md:hidden relative mx-auto w-56 h-72 group mb-8">
+                    <div className="md:hidden relative mx-auto w-64 h-80 group mb-8">
                         <div className="absolute inset-0 bg-white border-4 border-ink border-wobbly shadow-hard overflow-hidden flex items-center justify-center">
                             <img
                                 src={profileImage}
