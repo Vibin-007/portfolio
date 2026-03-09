@@ -3,7 +3,7 @@ import { workshopsData } from '../data/portfolioData';
 export default function Workshops() {
     const { title, subtitle, workshops, certsTitle, certs } = workshopsData;
     return (
-        <section id="workshops" className="pt-28 pb-24 px-6 relative scroll-mt-20">
+        <section id="workshops" className="pt-24 pb-24 px-6 relative scroll-mt-16">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-16 relative mx-auto w-full">
                     {/* Wavy underline decoration */}
