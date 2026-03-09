@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 export const navData = {
     initials: "Vibin D",
     sections: ['home', 'about', 'skills', 'projects', 'education', 'workshops', 'contact']
@@ -10,14 +12,14 @@ export const heroData = {
     subtitle: "Let's build.",
     description: "Crafting intelligent digital experiences with Python, Machine Learning & Full-Stack Web Development.",
     primaryButton: { text: "View Projects", href: "#projects" },
-    secondaryButton: { text: "Resume", href: "/Vibin_Resume.pdf" },
-    profileImage: "/profile.png"
+    secondaryButton: { text: "Resume", href: `${base}Vibin_Resume.pdf` },
+    profileImage: `${base}profile.png`
 };
 
 export const aboutData = {
     title: "About Me",
     subtitle: "A little background",
-    profileImage: "/profile.png",
+    profileImage: `${base}profile.png`,
     initials: "VD",
     name: "Vibin.D",
     role: "AI & DS Student",
@@ -38,7 +40,7 @@ export const aboutData = {
         </p>
     ],
     tags: ['Machine Learning', 'Python', 'Django', 'Data Analysis', 'Web Development'],
-    resumeButton: { text: "Download Resume", href: "/Vibin_Resume.pdf" }
+    resumeButton: { text: "Download Resume", href: `${base}Vibin_Resume.pdf` }
 };
 
 export const skillsData = {
