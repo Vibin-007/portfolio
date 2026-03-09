@@ -12,7 +12,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="pt-20 md:pt-28 pb-24 px-6 relative bg-white scroll-mt-16 md:scroll-mt-20">
+        <section id="contact" className="pt-20 md:pt-24 pb-24 px-6 relative bg-white scroll-mt-16">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16 relative mx-auto w-full">
                     {/* Wavy underline decoration */}
