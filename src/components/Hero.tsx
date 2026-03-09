@@ -4,7 +4,7 @@ export default function Hero() {
     const { badge, greeting, name, subtitle, description, primaryButton, secondaryButton, profileImage } = heroData;
 
     return (
-        <section id="hero" className="min-h-screen relative flex items-center justify-center pt-16 px-6 overflow-hidden">
+        <section id="hero" className="min-h-screen relative flex items-center justify-center pt-32 px-6 overflow-hidden">
 
             {/* Decorative background elements */}
             <div className="absolute top-1/4 left-10 md:left-20 w-32 h-32 border-4 border-dashed border-ink/20 border-wobbly-md rounded-full animate-[spin_20s_linear_infinite]" />

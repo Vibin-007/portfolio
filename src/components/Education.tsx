@@ -3,7 +3,7 @@ import { educationData } from '../data/portfolioData';
 export default function Education() {
     const { title, timeline } = educationData;
     return (
-        <section id="education" className="pt-24 pb-24 px-6 relative bg-secondary/5 scroll-mt-16">
+        <section id="education" className="pt-16 pb-24 px-6 relative bg-secondary/5 scroll-mt-8">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16 mx-auto w-full">
                     {/* Wavy underline decoration */}
