@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                paper: '#fdfbf7', // Warm Paper
+                paper: '#ffffff', // Pure White
                 ink: '#2d2d2d', // Soft Pencil Black
                 muted: '#e5e0d8', // Old Paper / Erased Pencil
                 accent: '#ff4d4d', // Red Correction Marker
