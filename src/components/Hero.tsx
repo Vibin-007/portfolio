@@ -15,8 +15,8 @@ export default function Hero() {
 
                 {/* Text Content */}
                 <div className="text-center md:text-left relative">
-                    <div className="inline-block bg-white px-6 py-2 md:px-4 md:py-1 border-2 border-ink border-wobbly-sm shadow-hard-sm mb-4 md:mb-2 rotate-2">
-                        <p className="font-body font-bold text-ink uppercase tracking-widest text-base md:text-sm">
+                    <div className="inline-block bg-white px-4 py-1 border-2 border-ink border-wobbly-sm shadow-hard-sm mb-2 rotate-2">
+                        <p className="font-body font-bold text-ink uppercase tracking-widest text-sm">
                             {badge}
                         </p>
                     </div>
