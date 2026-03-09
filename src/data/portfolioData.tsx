@@ -2,7 +2,7 @@ const base = import.meta.env.BASE_URL;
 
 export const navData = {
     initials: "Vibin D",
-    sections: ['hero', 'about', 'skills', 'projects', 'education', 'workshops', 'contact']
+    sections: ['about', 'skills', 'projects', 'education', 'workshops', 'contact']
 };
 
 export const heroData = {
