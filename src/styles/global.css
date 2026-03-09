@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: theme('colors.paper');
+    background-image: radial-gradient(theme('colors.muted') 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    color: theme('colors.ink');
+    font-family: theme('fontFamily.body');
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    cursor: none;
+    /* Custom hand-drawn cursor */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: theme('fontFamily.heading');
+    font-weight: 700;
+  }
+
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+@layer utilities {
+  .border-wobbly {
+    border-radius: theme('borderRadius.wobbly');
+  }
+
+  .border-wobbly-md {
+    border-radius: theme('borderRadius.wobbly-md');
+  }
+
+  .border-wobbly-sm {
+    border-radius: theme('borderRadius.wobbly-sm');
+  }
+
+  .shadow-hard {
+    box-shadow: theme('boxShadow.hard');
+  }
+
+  .shadow-hard-lg {
+    box-shadow: theme('boxShadow.hard-lg');
+  }
+
+  .shadow-hard-sm {
+    box-shadow: theme('boxShadow.hard-sm');
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: theme('colors.accent');
+  transition: transform 0.1s;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  /* Slightly irregular */
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px dashed theme('colors.ink');
+  border-radius: theme('borderRadius.wobbly');
+  transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+  animation: wobble 4s ease-in-out infinite;
+}
+
+@keyframes wobble {
+
+  0%,
+  100% {
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+}
+
+.cursor-hover .cursor-outline {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 77, 77, 0.1);
+  border-color: theme('colors.accent');
+  border-style: solid;
+}
