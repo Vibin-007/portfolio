@@ -3,7 +3,7 @@ import { skillsData } from '../data/portfolioData';
 export default function Skills() {
     const { title, subtitle, techStackTitle, skills, mlTitle, mlTopics, mlFormula } = skillsData;
     return (
-        <section id="skills" className="py-24 px-6 relative overflow-hidden">
+        <section id="skills" className="pt-32 pb-24 px-6 relative overflow-hidden scroll-mt-24">
             {/* Background scribble */}
             <svg className="absolute top-0 right-0 w-64 h-64 text-secondary/10 -z-10 pointer-events-none" viewBox="0 0 100 100" fill="none">
                 <path d="M10,10 Q90,10 90,90 Q10,90 10,10" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" />
