@@ -89,7 +89,7 @@ export const projectsData = {
             title: 'CampNotes',
             desc: 'Department-level web application for sharing academic notes among staff and students with secure upload, instant download, and role-based access control.',
             tech: ['Django', 'PostgreSQL', 'HTML/CSS'],
-            repoLink: 'https://github.com/Vibin-007',
+            repoLink: 'https://github.com/Vibin-007/Camp-Note.git',
         },
     ]
 };
