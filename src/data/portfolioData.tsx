@@ -82,12 +82,14 @@ export const projectsData = {
             title: 'College Event Website',
             desc: 'Responsive website for a college event with multiple event categories, registration forms, and user-friendly UI for event details and schedules.',
             tech: ['Django', 'PostgreSQL', 'JavaScript', 'HTML/CSS'],
+            repoLink: 'https://github.com/Vibin-007/College_event.git',
         },
         {
             num: '02',
             title: 'CampNotes',
             desc: 'Department-level web application for sharing academic notes among staff and students with secure upload, instant download, and role-based access control.',
             tech: ['Django', 'PostgreSQL', 'HTML/CSS'],
+            repoLink: 'https://github.com/Vibin-007',
         },
     ]
 };
