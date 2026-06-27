@@ -12,6 +12,8 @@ dist/
 # editor
 .vscode/
 .idea/
+.refact/
+mapcn_tree.json
 
 # OS
 .DS_Store
