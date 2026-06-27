@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, Variants } from 'framer-motion'
 
 interface SplitTextRevealProps {
   text: string
@@ -15,7 +15,7 @@ const SplitTextReveal: React.FC<SplitTextRevealProps> = ({ text, className = '',
   // Split text into words, then words into characters
   const words = text.split(' ')
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +23,7 @@ const SplitTextReveal: React.FC<SplitTextRevealProps> = ({ text, className = '',
     },
   }
 
-  const child = {
+  const child: Variants = {
     hidden: {
       opacity: 0,
       y: '100%',
