@@ -87,6 +87,9 @@ export function ExpandableCard({
                   <img
                     src={src}
                     alt={title}
+                    width="850"
+                    height="320"
+                    decoding="async"
                     className="w-full h-64 sm:h-80 object-cover object-center"
                   />
                 </div>
@@ -171,6 +174,10 @@ export function ExpandableCard({
             <img
               src={src}
               alt={title}
+              width="400"
+              height="224"
+              loading="lazy"
+              decoding="async"
               className="w-full h-48 sm:h-56 object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
             />
           </motion.div>

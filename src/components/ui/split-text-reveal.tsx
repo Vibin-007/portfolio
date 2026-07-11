@@ -6,11 +6,12 @@ interface SplitTextRevealProps {
   className?: string
   style?: React.CSSProperties
   delay?: number
+  as?: 'div' | 'h1' | 'h2' | 'h3' | 'span' | 'p'
 }
 
-const SplitTextReveal: React.FC<SplitTextRevealProps> = ({ text, className = '', style, delay = 0 }) => {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(containerRef, { once: true, margin: '-20% 0px' })
+const SplitTextReveal: React.FC<SplitTextRevealProps> = ({ text, className = '', style, delay = 0, as = 'div' }) => {
+  const containerRef = useRef<HTMLElement>(null)
+  const isInView = useInView(containerRef as any, { once: true, margin: '-20% 0px' })
 
   // Split text into words, then words into characters
   const words = text.split(' ')
@@ -39,9 +40,11 @@ const SplitTextReveal: React.FC<SplitTextRevealProps> = ({ text, className = '',
     },
   }
 
+  const MotionTag = (motion as any)[as] || motion.div
+
   return (
-    <motion.div
-      ref={containerRef}
+    <MotionTag
+      ref={containerRef as any}
       className={className.replace('hero-heading', '').trim()}
       style={style}
       variants={container}
@@ -62,7 +65,7 @@ const SplitTextReveal: React.FC<SplitTextRevealProps> = ({ text, className = '',
           ))}
         </span>
       ))}
-    </motion.div>
+    </MotionTag>
   )
 }
 

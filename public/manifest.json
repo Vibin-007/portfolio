@@ -1,0 +1,16 @@
+{
+  "short_name": "Vibin D",
+  "name": "Vibin D | AI & Data Science Student & Developer",
+  "icons": [
+    {
+      "src": "/portfolio/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/portfolio/",
+  "background_color": "#0C0C0C",
+  "theme_color": "#0C0C0C",
+  "display": "standalone",
+  "orientation": "portrait"
+}

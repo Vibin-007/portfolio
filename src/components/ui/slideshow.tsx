@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 
-import hack1 from '@/assets/images/hack1.jpeg'
-import hack2 from '@/assets/images/hack2.jpeg'
+import hack1 from '@/assets/images/hack1.webp'
+import hack2 from '@/assets/images/hack1.webp'
 
 const slides = [
   {

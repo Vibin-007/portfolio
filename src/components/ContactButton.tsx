@@ -9,7 +9,7 @@ interface ContactButtonProps {
 const ContactButton: React.FC<ContactButtonProps> = ({ className = '' }) => {
   return (
     <Magnet padding={30} strength={2} className={`inline-block ${className}`}>
-      <a href="#contact" className="inline-block">
+      <a href="#contact" className="inline-block" aria-label="Scroll to Contact section to get in touch with Vibin D">
         <GlassButton
           size="default"
           contentClassName="flex items-center justify-center"

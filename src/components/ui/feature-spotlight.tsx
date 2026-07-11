@@ -57,12 +57,12 @@ const AnimatedFeatureSpotlight = React.forwardRef<HTMLElement, AnimatedFeatureSp
               {preheaderIcon}
               <span>{preheaderText}</span>
             </div>
-            <h2
+            <h3
               id="feature-spotlight-heading"
               className="text-4xl lg:text-5xl font-black tracking-tight text-[#D7E2EA] uppercase animate-in fade-in slide-in-from-top-4 duration-700 delay-150"
             >
               {heading}
-            </h2>
+            </h3>
             <p className="text-lg text-[#D7E2EA]/70 font-light leading-relaxed animate-in fade-in slide-in-from-top-4 duration-700 delay-300">
               {description}
             </p>

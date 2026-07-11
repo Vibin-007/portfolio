@@ -4,7 +4,7 @@ import FadeIn from './FadeIn'
 import { AnimatedFeatureSpotlight } from '@/components/ui/feature-spotlight'
 import SplitTextReveal from './ui/split-text-reveal'
 
-import hack1 from '@/assets/images/hack1.jpeg'
+import hack1 from '@/assets/images/hack1.webp'
 
 const HackathonsSection: React.FC = () => {
   return (
@@ -12,6 +12,7 @@ const HackathonsSection: React.FC = () => {
       <div className="flex flex-col items-center max-w-6xl mx-auto w-full">
         <SplitTextReveal
           text="Hackathons"
+          as="h2"
           className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-16 sm:mb-20 md:mb-28"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         />

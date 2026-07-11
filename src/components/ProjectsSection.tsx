@@ -154,6 +154,7 @@ const ProjectsSection: React.FC = () => {
       <div className="px-5 sm:px-8 md:px-10 py-20">
         <SplitTextReveal
           text="Projects"
+          as="h2"
           className="hero-heading font-black uppercase leading-none tracking-tight text-center"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         />

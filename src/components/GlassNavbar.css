@@ -1,0 +1,310 @@
+/* ============================================================
+   GlassNavbar — Liquid Glass fixed navigation bar
+   ============================================================ */
+
+/* ---------- Navbar shell ---------- */
+.glass-navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  border-radius: 100px;
+  padding: 0;
+
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+
+  /* The glass surface — backdrop-filter is applied by useLiquidGlass */
+  background: linear-gradient(180deg, rgba(14, 14, 22, 0.18), rgba(14, 14, 22, 0.32));
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 -8px 20px rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.13);
+
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow, background;
+}
+
+/* After scrolling past the hero, the bar gets slightly darker but stays the same size */
+.glass-navbar--scrolled {
+  background: linear-gradient(180deg, rgba(10, 10, 18, 0.28), rgba(10, 10, 18, 0.45));
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45),
+    inset 0 -8px 20px rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.13);
+}
+
+/* ---------- Cursor-tracked glare (CSS custom properties set via JS) ---------- */
+.glass-navbar__glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    160px circle at var(--gx, 25%) var(--gy, 15%),
+    rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04) 45%, transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* ---------- Content layout ---------- */
+.glass-navbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  gap: 8px;
+}
+
+/* ---------- Logo ---------- */
+.glass-navbar__logo {
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  user-select: none;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.glass-navbar__logo:hover {
+  transform: scale(1.04);
+}
+
+.glass-navbar__logo-v {
+  font-size: 26px;
+  background: linear-gradient(135deg, #fff 0%, #a0b8cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.glass-navbar__logo-text {
+  background: linear-gradient(135deg, #c8d8e4 0%, #8899aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Desktop links ---------- */
+.glass-navbar__links {
+  display: none;
+  align-items: center;
+  gap: 2px;
+}
+@media (min-width: 768px) {
+  .glass-navbar__links {
+    display: flex;
+  }
+}
+
+.glass-navbar__link {
+  position: relative;
+  text-decoration: none;
+  color: rgba(215, 226, 234, 0.7);
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 100px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.glass-navbar__link:hover {
+  color: #fff;
+}
+.glass-navbar__link--active {
+  color: #fff;
+}
+
+.glass-navbar__link-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animated indicator pill behind the active link */
+.glass-navbar__link-indicator {
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  z-index: 0;
+}
+
+/* ---------- Resume button (desktop) ---------- */
+.glass-navbar__resume-btn {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+@media (min-width: 768px) {
+  .glass-navbar__resume-btn {
+    display: flex;
+  }
+}
+.glass-navbar__resume-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.30);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.10);
+}
+
+/* ---------- Mobile Floating Buttons ---------- */
+.glass-mobile-floating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+.glass-mobile-floating-btn:active {
+  transform: scale(0.9);
+}
+@media (min-width: 768px) {
+  .glass-mobile-floating-btn {
+    display: none;
+  }
+}
+
+.glass-mobile-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 101;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+.glass-mobile-close-btn:active {
+  transform: scale(0.9);
+}
+
+/* ============================================================
+   Mobile full-screen menu
+   ============================================================ */
+.glass-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-mobile-menu__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 12, 12, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glass-mobile-menu__links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.glass-mobile-menu__link {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+.glass-mobile-menu__link:hover,
+.glass-mobile-menu__link--active {
+  color: #D7E2EA;
+  background: none;
+}
+
+/* ============================================================
+   Pointer-tracking glare for the navbar
+   ============================================================ */
+/* This is driven by a small JS snippet in the component via
+   onPointerMove setting --gx and --gy custom properties */
+
+/* ============================================================
+   Light Background Theme Overrides
+   ============================================================ */
+.glass-navbar--light-bg .glass-navbar__link {
+  color: #0c0c0c;
+}
+
+.glass-navbar--light-bg .glass-navbar__link--active {
+  color: #0c0c0c;
+}
+
+.glass-navbar--light-bg .glass-navbar__link-indicator {
+  background: rgba(12, 12, 12, 0.08);
+  border-color: rgba(12, 12, 12, 0.15);
+}
+
+.glass-navbar--light-bg .glass-navbar__resume-btn {
+  color: #0c0c0c;
+  border-color: rgba(12, 12, 12, 0.4);
+  background: rgba(12, 12, 12, 0.04);
+}
+
+.glass-navbar--light-bg .glass-navbar__mobile-btn {
+  color: #0c0c0c;
+}
+
+.glass-navbar--light-bg .glass-navbar__glare {
+  background: radial-gradient(
+    circle at var(--gx, 50%) var(--gy, 50%),
+    rgba(12, 12, 12, 0.06) 0%,
+    transparent 50%
+  );
+}

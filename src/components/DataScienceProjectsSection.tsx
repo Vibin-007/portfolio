@@ -5,8 +5,8 @@ import { ExpandableCard } from '@/components/ui/expandable-card'
 import { Button } from '@/components/ui/button'
 import Magnet from './Magnet'
 import SplitTextReveal from './ui/split-text-reveal'
-import scannerImg from '../assets/images/Scanner.png'
-import summarizerImg from '../assets/images/Summarizer.png'
+import scannerImg from '../assets/images/Scanner.webp'
+import summarizerImg from '../assets/images/Summarizer.webp'
 
 const DataScienceProjectsSection: React.FC = () => {
   return (
@@ -14,6 +14,7 @@ const DataScienceProjectsSection: React.FC = () => {
       <div className="px-5 sm:px-8 md:px-10 py-20 pb-32 max-w-7xl mx-auto w-full">
         <SplitTextReveal
           text="Data Science Projects"
+          as="h2"
           className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-16 sm:mb-20 md:mb-28"
           style={{ fontSize: 'clamp(3rem, 9vw, 120px)' }}
         />

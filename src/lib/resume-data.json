@@ -1,0 +1,154 @@
+{
+  "personal": {
+    "name": "Vibin D",
+    "role": "B.Sc Artificial Intelligence & Data Science Student",
+    "college": "Rathinam College of Arts and Science",
+    "cgpa": "8.08",
+    "objective": "AI & Data Science graduate with foundational knowledge in Machine Learning and hands-on experience in Python, data analysis, and web development. Familiar with building and evaluating ML models and eager to apply data-driven solutions to real-world problems.",
+    "personality": [
+      "Curious",
+      "Passionate about AI",
+      "Continuous learner",
+      "Enjoys building real-world applications",
+      "Interested in Machine Learning and Full Stack Development",
+      "Problem solver"
+    ]
+  },
+  "technicalSkills": ["HTML", "CSS", "JavaScript", "Python", "Java", "PostgreSQL"],
+  "softSkills": ["Problem Solving", "Quick Learner", "Adaptable", "Collaboration", "Time Management"],
+  "projects": [
+    {
+      "name": "College Event Management System",
+      "techStack": ["HTML", "CSS", "JavaScript", "Django", "PostgreSQL"],
+      "description": "Built a scalable web platform for multi-category event registrations. Implemented secure authentication. Created dynamic workflows. Built an event management dashboard. Reduced manual registration effort.",
+      "category": "fullstack",
+      "highlights": [
+        "Scalable web platform for multi-category event registrations",
+        "Secure authentication system",
+        "Dynamic workflows for event management",
+        "Admin event management dashboard",
+        "Reduced manual registration effort significantly"
+      ]
+    },
+    {
+      "name": "Machine Learning Web Application",
+      "techStack": ["Python", "Streamlit", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+      "description": "A comprehensive ML web application supporting Regression, Classification, and Clustering. Implements algorithms like Linear Regression, Random Forest, KNN, Naive Bayes, K-Means, and DBSCAN. Features metrics like Accuracy, R², and RMSE, with interactive dashboards, PCA visualization, and Confusion Matrix.",
+      "category": "machine-learning",
+      "highlights": [
+        "Supports Regression, Classification, and Clustering",
+        "Implements Linear Regression, Random Forest, KNN, Naive Bayes, K-Means, DBSCAN",
+        "Evaluation metrics: Accuracy, R², RMSE",
+        "PCA visualization and Confusion Matrix",
+        "Interactive dashboards built with Streamlit"
+      ],
+      "algorithms": ["Linear Regression", "Random Forest", "KNN", "Naive Bayes", "K-Means", "DBSCAN"],
+      "metrics": ["Accuracy", "R²", "RMSE"],
+      "visualizations": ["PCA", "Confusion Matrix", "Interactive dashboards"]
+    }
+  ],
+  "workshops": [
+    {
+      "name": "Mastering Generative AI",
+      "institution": "IISc Bangalore",
+      "topics": ["Generative AI", "Prompt Engineering", "TensorFlow", "Python", "Tokenization", "Real-world AI applications"]
+    },
+    {
+      "name": "Introduction to Machine Learning",
+      "institution": "IIT Palakkad",
+      "topics": ["Supervised Learning", "Unsupervised Learning", "Model Evaluation", "Optimization", "Python", "NumPy", "Pandas"]
+    }
+  ],
+  "certifications": [
+    {
+      "provider": "Google",
+      "name": "AI Fundamentals"
+    },
+    {
+      "provider": "Meta",
+      "name": "Programming with JavaScript"
+    }
+  ],
+  "intents": {
+    "greeting": {
+      "patterns": ["hi", "hello", "hey", "greetings", "good morning", "good evening", "good afternoon", "what's up", "howdy", "sup"],
+      "response": "Hi there! 👋 I'm Vibin. I can tell you about Vibin's education, projects, technical skills, certifications, workshops, and career goals. What would you like to know?"
+    },
+    "about": {
+      "patterns": ["who is vibin", "tell me about vibin", "about vibin", "who are you", "tell me about yourself", "introduce yourself", "introduce vibin", "about him", "who is he", "describe vibin"],
+      "response": "I'm Vibin D, a B.Sc. Artificial Intelligence & Data Science student at Rathinam College of Arts and Science with a current CGPA of 8.08. I'm passionate about Artificial Intelligence, Machine Learning, Python development, Java, and full-stack web development. I enjoy building practical software solutions and continuously improving my technical skills."
+    },
+    "education": {
+      "patterns": ["education", "college", "university", "degree", "cgpa", "gpa", "academic", "study", "studying", "school", "qualification", "educational background"],
+      "response": "I'm currently pursuing a B.Sc. in Artificial Intelligence & Data Science at **Rathinam College of Arts and Science** with a CGPA of **8.08**. My coursework covers Machine Learning, Data Analysis, Python programming, and web development, giving me a strong foundation in both AI theory and practical application."
+    },
+    "technicalSkills": {
+      "patterns": ["technical skills", "skills", "technologies", "tech stack", "programming languages", "languages", "what can you do", "what technologies", "tools", "frameworks", "what does he know", "strongest skills"],
+      "response": "My technical skill set includes:\n\n**Programming Languages:** Python, Java, JavaScript\n**Web Technologies:** HTML, CSS, Django, Streamlit\n**Database:** PostgreSQL\n**ML/Data Science:** Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, TensorFlow\n\nI'm strongest in **Python** and **Machine Learning**, with hands-on experience building full-stack web applications and data science projects."
+    },
+    "softSkills": {
+      "patterns": ["soft skills", "interpersonal", "personality", "traits", "qualities", "characteristics", "strengths"],
+      "response": "My key soft skills include:\n\n- **Problem Solving** — I enjoy tackling complex challenges and finding efficient solutions\n- **Quick Learner** — I rapidly pick up new technologies and frameworks\n- **Adaptable** — I'm comfortable working with different tech stacks and project requirements\n- **Collaboration** — I work well in team environments\n- **Time Management** — I effectively prioritize tasks and meet deadlines"
+    },
+    "projects": {
+      "patterns": ["projects", "what have you built", "what projects", "portfolio projects", "work", "show me projects", "built", "developed", "created"],
+      "response": "I've built two major projects:\n\n**1. College Event Management System**\n*Tech: HTML, CSS, JavaScript, Django, PostgreSQL*\nA scalable web platform for multi-category event registrations with secure authentication, dynamic workflows, and an admin dashboard that significantly reduced manual registration effort.\n\n**2. Machine Learning Web Application**\n*Tech: Python, Streamlit, Scikit-learn, Pandas, NumPy*\nA comprehensive ML app supporting Regression, Classification, and Clustering with algorithms like Random Forest, KNN, K-Means, and DBSCAN. Features interactive dashboards, PCA visualization, and confusion matrices."
+    },
+    "eventProject": {
+      "patterns": ["event management", "event project", "django project", "college event", "registration system", "event registration"],
+      "response": "The **College Event Management System** is a full-stack web application built with **Django** and **PostgreSQL**.\n\n**Key Features:**\n- Scalable platform supporting multi-category event registrations\n- Secure user authentication system\n- Dynamic workflows for managing event logistics\n- Admin dashboard for event oversight\n- Significantly reduced manual registration effort\n\n**Tech Stack:** HTML, CSS, JavaScript, Django, PostgreSQL\n\nThis project demonstrates my full-stack development capabilities, from frontend design to backend architecture and database management."
+    },
+    "mlProject": {
+      "patterns": ["machine learning project", "ml project", "streamlit project", "ml app", "ml web app", "machine learning app", "data science project", "scikit", "sklearn"],
+      "response": "The **Machine Learning Web Application** is built with **Python** and **Streamlit**, offering a comprehensive ML toolkit.\n\n**Supported Tasks:** Regression, Classification, Clustering\n\n**Algorithms Implemented:**\n- Linear Regression, Random Forest, KNN, Naive Bayes\n- K-Means, DBSCAN\n\n**Evaluation Metrics:** Accuracy, R², RMSE\n\n**Visualizations:** PCA plots, Confusion Matrices, Interactive dashboards\n\n**Tech Stack:** Python, Streamlit, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn\n\nThis project showcases my machine learning expertise and ability to build interactive data science applications."
+    },
+    "workshops": {
+      "patterns": ["workshops", "training", "attended", "workshop", "learning events", "bootcamp"],
+      "response": "I've attended two prestigious workshops:\n\n**1. Mastering Generative AI** — *IISc Bangalore*\nCovered Generative AI, Prompt Engineering, TensorFlow, Python, Tokenization, and real-world AI applications.\n\n**2. Introduction to Machine Learning** — *IIT Palakkad*\nCovered Supervised & Unsupervised Learning, Model Evaluation, Optimization, Python, NumPy, and Pandas.\n\nThese workshops from India's top institutions have deepened my understanding of cutting-edge AI and ML concepts."
+    },
+    "certifications": {
+      "patterns": ["certifications", "certificates", "certified", "certification", "courses", "course"],
+      "response": "I hold two industry certifications:\n\n**1. AI Fundamentals** — *Google*\nCovers foundational concepts in Artificial Intelligence.\n\n**2. Programming with JavaScript** — *Meta*\nCovers JavaScript programming fundamentals and best practices.\n\nThese certifications from Google and Meta validate my skills in AI and web development."
+    },
+    "whyHire": {
+      "patterns": ["why should i hire", "why hire", "why vibin", "what makes him different", "what makes you different", "unique", "stand out", "why choose", "hire vibin"],
+      "response": "Here's why I stand out:\n\n1. **Diverse Skill Set** — I combine AI/ML expertise with full-stack web development, making me versatile across projects.\n2. **Hands-On Experience** — I don't just study theory; I build real applications like my ML Web App and Event Management System.\n3. **Premier Training** — I've trained at IISc Bangalore and IIT Palakkad, learning from India's top institutions.\n4. **Industry Certifications** — Certified by Google (AI Fundamentals) and Meta (JavaScript).\n5. **Strong Foundation** — 8.08 CGPA in AI & Data Science with a passion for continuous learning.\n6. **Problem Solver** — I enjoy tackling complex challenges and delivering practical, scalable solutions."
+    },
+    "mlExperience": {
+      "patterns": ["machine learning experience", "ml experience", "ml algorithms", "algorithms", "models", "model", "regression", "classification", "clustering", "data science experience"],
+      "response": "I have hands-on machine learning experience across all three major ML paradigms:\n\n**Supervised Learning:**\n- Linear Regression, Random Forest, KNN, Naive Bayes\n- Metrics: Accuracy, R², RMSE\n\n**Unsupervised Learning:**\n- K-Means, DBSCAN clustering\n- PCA for dimensionality reduction\n\n**Tools & Libraries:** Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, TensorFlow\n\nI've also attended workshops at **IISc Bangalore** (Generative AI) and **IIT Palakkad** (ML fundamentals), giving me both practical and theoretical depth."
+    },
+    "backend": {
+      "patterns": ["backend", "server side", "server", "django", "database", "postgresql", "api", "backend skills", "backend technologies"],
+      "response": "My backend experience includes:\n\n**Framework:** Django (Python)\n**Database:** PostgreSQL\n**Skills:** User authentication, dynamic workflows, RESTful architecture, database design\n\nIn my College Event Management System, I built a complete backend with secure authentication, scalable event registration workflows, and an admin dashboard — all powered by Django and PostgreSQL."
+    },
+    "frontend": {
+      "patterns": ["frontend", "front end", "ui", "user interface", "html", "css", "design", "frontend technologies", "web design"],
+      "response": "My frontend skills include:\n\n**Core Technologies:** HTML, CSS, JavaScript\n**Experience:** Responsive design, interactive UIs, dynamic event-driven interfaces\n\nI've applied these skills in my College Event Management System to create an intuitive, user-friendly interface for event registrations and admin management."
+    },
+    "career": {
+      "patterns": ["career", "career goal", "objective", "future", "aspirations", "what role", "job", "career objective", "what next", "learn next"],
+      "response": "My career objective is to leverage my AI & Data Science education to apply data-driven solutions to real-world problems. I'm particularly interested in:\n\n- **Machine Learning Engineering** — Building and deploying ML models\n- **Full-Stack AI Development** — Combining web development with AI capabilities\n- **Data Science** — Extracting insights from complex datasets\n\nI'm eager to join a team where I can contribute to innovative projects while continuing to grow my skills in AI, ML, and software engineering."
+    },
+    "summary": {
+      "patterns": ["summarize", "summary", "overview", "brief", "quick summary", "sum up", "profile summary", "resume summary", "one sentence", "100 words"],
+      "response": "**Vibin D** is a B.Sc. AI & Data Science student at Rathinam College of Arts and Science (CGPA: 8.08) with hands-on experience in Python, Machine Learning, and full-stack web development. He has built a Django-based Event Management System and a comprehensive ML Web Application featuring regression, classification, and clustering algorithms. Trained at IISc Bangalore and IIT Palakkad, and certified by Google and Meta, Vibin combines strong technical skills with a passion for building practical, data-driven solutions."
+    },
+    "thanks": {
+      "patterns": ["thanks", "thank you", "thx", "appreciate", "great", "awesome", "nice", "cool", "perfect", "wonderful"],
+      "response": "You're welcome! 😊 If you have any more questions about Vibin's skills, projects, or experience, feel free to ask. I'm here to help!"
+    },
+    "goodbye": {
+      "patterns": ["bye", "goodbye", "see you", "later", "exit", "quit", "close"],
+      "response": "Goodbye! 👋 Thank you for learning about Vibin. Feel free to come back anytime if you have more questions!"
+    },
+    "databases": {
+      "patterns": ["database", "databases", "sql", "postgresql", "data storage", "db"],
+      "response": "I have experience with **PostgreSQL**, a powerful open-source relational database. In my College Event Management System, I used PostgreSQL for:\n\n- Storing user data with secure authentication\n- Managing multi-category event registrations\n- Building dynamic workflows and admin dashboards\n\nI'm comfortable with database design, SQL queries, and integrating databases with web applications through Django's ORM."
+    },
+    "libraries": {
+      "patterns": ["libraries", "library", "packages", "modules", "frameworks used"],
+      "response": "Here are the key libraries and frameworks I've worked with:\n\n**Web Development:** Django\n**ML/AI:** Scikit-learn, TensorFlow\n**Data Processing:** Pandas, NumPy\n**Visualization:** Matplotlib, Seaborn\n**Web App Framework:** Streamlit\n\nThese tools enable me to build end-to-end solutions from data analysis to deployment."
+    }
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vibin-007.github.io/portfolio/sitemap.xml

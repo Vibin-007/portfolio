@@ -35,6 +35,7 @@ const AboutSection: React.FC = () => {
       <div className="flex flex-col items-center gap-10 sm:gap-14 md:gap-16 z-10">
         <SplitTextReveal
           text="About me"
+          as="h2"
           className="hero-heading font-black uppercase leading-none tracking-tight text-center"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         />
@@ -47,9 +48,7 @@ const AboutSection: React.FC = () => {
           />
 
           <FadeIn delay={0.2} y={20} duration={0.7}>
-            <a href="#contact">
-              <ContactButton />
-            </a>
+            <ContactButton />
           </FadeIn>
         </div>
       </div>

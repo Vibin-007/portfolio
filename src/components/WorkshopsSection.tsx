@@ -24,6 +24,7 @@ const WorkshopsSection: React.FC = () => {
       <div className="flex flex-col items-center max-w-4xl mx-auto w-full">
         <SplitTextReveal
           text="Workshops"
+          as="h2"
           className="font-black uppercase leading-none tracking-tight text-center text-[#0C0C0C] mb-16 sm:mb-20 md:mb-28"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         />

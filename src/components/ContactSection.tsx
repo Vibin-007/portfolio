@@ -12,6 +12,7 @@ const ContactItem = ({ contact }: { contact: any }) => {
       href={contact.href}
       target={contact.href.startsWith('http') ? '_blank' : undefined}
       rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+      aria-label={contact.ariaLabel}
       className="group flex items-center gap-4 sm:gap-6 w-full"
     >
       <Magnet padding={20} strength={1.2}>
@@ -39,25 +40,29 @@ const ContactSection: React.FC = () => {
       icon: Mail,
       label: 'Email',
       value: 'vibind007@gmail.com',
-      href: 'mailto:vibind007@gmail.com'
+      href: 'mailto:vibind007@gmail.com',
+      ariaLabel: 'Send email to vibind007@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
       value: '+91 86083 22120',
-      href: 'tel:+918608322120'
+      href: 'tel:+918608322120',
+      ariaLabel: 'Call Vibin D at +91 86083 22120'
     },
     {
       icon: Github,
       label: 'GitHub',
       value: 'github.com/Vibin-007',
-      href: 'https://github.com/Vibin-007'
+      href: 'https://github.com/Vibin-007',
+      ariaLabel: 'View Vibin D\'s GitHub profile (opens in a new tab)'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'linkedin.com/in/vibin-d',
-      href: 'https://linkedin.com/in/vibin-d'
+      href: 'https://linkedin.com/in/vibin-d',
+      ariaLabel: 'View Vibin D\'s LinkedIn profile (opens in a new tab)'
     }
   ]
 
@@ -79,6 +84,7 @@ const ContactSection: React.FC = () => {
       <div className="flex flex-col items-center max-w-5xl mx-auto relative z-10">
         <SplitTextReveal
           text="Get In Touch"
+          as="h2"
           className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-6 sm:mb-8"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         />
@@ -97,6 +103,7 @@ const ContactSection: React.FC = () => {
               <a 
                 href="mailto:vibind007@gmail.com"
                 onClick={handleCopyEmail}
+                aria-label="Email Vibin D at vibind007@gmail.com (click to copy to clipboard)"
                 className="group relative flex items-center justify-center gap-3 px-6 py-4 sm:px-10 sm:py-5 border border-[#D7E2EA]/20 bg-[#D7E2EA]/[0.03] hover:bg-[#D7E2EA]/10 hover:border-[#D7E2EA]/40 rounded-2xl sm:rounded-full transition-all duration-300"
               >
                 <span className="text-xl sm:text-2xl md:text-3xl font-medium text-[#D7E2EA] tracking-wide group-hover:text-white transition-colors duration-300">
