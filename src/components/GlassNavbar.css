@@ -15,7 +15,12 @@
   padding: 0;
 
   @media (max-width: 767px) {
-    display: none !important;
+    width: 60px;
+    height: 60px;
+    left: auto;
+    right: 16px;
+    transform: none;
+    overflow: hidden;
   }
 
   /* The glass surface — backdrop-filter is applied by useLiquidGlass */
@@ -30,6 +35,15 @@
   will-change: transform, box-shadow, background;
 }
 
+/* Hide the refractive blur and background ONLY on mobile when not scrolled */
+@media (max-width: 767px) {
+  .glass-navbar:not(.glass-navbar--scrolled) {
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none !important;
+  }
+}
+
 /* After scrolling past the hero, the bar gets slightly darker but stays the same size */
 .glass-navbar--scrolled {
   background: linear-gradient(180deg, rgba(10, 10, 18, 0.28), rgba(10, 10, 18, 0.45));
@@ -38,6 +52,11 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.45),
     inset 0 -8px 20px rgba(255, 255, 255, 0.06),
     inset 0 0 0 1px rgba(255, 255, 255, 0.13);
+}
+@media (max-width: 767px) {
+  .glass-navbar--scrolled {
+    width: calc(100% - 32px);
+  }
 }
 
 /* ---------- Cursor-tracked glare (CSS custom properties set via JS) ---------- */
@@ -51,6 +70,11 @@
   );
   pointer-events: none;
 }
+@media (max-width: 767px) {
+  .glass-navbar__glare {
+    display: none;
+  }
+}
 
 /* ---------- Content layout ---------- */
 .glass-navbar__content {
@@ -59,6 +83,100 @@
   justify-content: center;
   padding: 10px 20px;
   gap: 8px;
+}
+@media (max-width: 767px) {
+  .glass-navbar__content {
+    justify-content: space-between;
+    padding: 8px 12px;
+    width: 100%;
+    gap: 0;
+    transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-navbar:not(.glass-navbar--scrolled) .glass-navbar__content {
+    padding: 8px;
+  }
+}
+
+/* ---------- Mobile Brand ---------- */
+.glass-navbar__mobile-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  max-width: 250px;
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  transform-origin: left center;
+  /* Super smooth bouncy spring transition */
+  transition: max-width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              opacity 0.4s ease, 
+              margin-right 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .glass-navbar:not(.glass-navbar--scrolled) .glass-navbar__mobile-brand {
+    max-width: 0;
+    opacity: 0;
+    margin-right: -8px; /* Cancels out flex gap */
+    pointer-events: none;
+    transform: scale(0.5) translateX(-20px);
+  }
+}
+@media (min-width: 768px) {
+  .glass-navbar__mobile-brand {
+    max-width: 44px; /* Exact size of the photo for smooth expansion */
+    gap: 0;
+  }
+  .glass-navbar:not(.glass-navbar--scrolled) .glass-navbar__mobile-brand {
+    max-width: 0;
+    min-width: 0;
+    opacity: 0;
+    margin-right: -8px; /* Cancels out flex gap */
+    pointer-events: none;
+    transform: scale(0.5) translateX(-20px);
+  }
+  .glass-navbar__mobile-name {
+    display: none;
+  }
+}
+.glass-navbar__mobile-photo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #111;
+}
+.glass-navbar__mobile-name {
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Mobile Toggle ---------- */
+.glass-navbar__mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.glass-navbar__mobile-toggle:active {
+  transform: scale(0.95);
+}
+@media (min-width: 768px) {
+  .glass-navbar__mobile-toggle {
+    display: none;
+  }
 }
 
 /* ---------- Logo ---------- */
@@ -142,9 +260,22 @@
   z-index: 0;
 }
 
-/* ---------- Resume button (desktop) ---------- */
+/* ---------- Actions Container ---------- */
+.glass-navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (max-width: 767px) {
+  .glass-navbar:not(.glass-navbar--scrolled) .glass-navbar__actions {
+    gap: 0;
+  }
+}
+
+/* ---------- Resume button ---------- */
 .glass-navbar__resume-btn {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 6px;
   padding: 10px 18px;
@@ -153,17 +284,32 @@
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-family: 'Kanit', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 800;
+  font-size: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.25s ease;
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .glass-navbar__resume-btn {
-    display: flex;
+    padding: 8px 16px;
+    font-size: 15px;
+    overflow: hidden;
+    max-width: 150px;
+    transition: max-width 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.5s ease, margin 0.5s ease, border-width 0.5s ease, background 0.25s ease, color 0.25s ease;
+    white-space: nowrap;
+  }
+  .glass-navbar:not(.glass-navbar--scrolled) .glass-navbar__resume-btn {
+    max-width: 0;
+    min-width: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    font-size: 0;
+    pointer-events: none;
   }
 }
 .glass-navbar__resume-btn:hover {
@@ -173,51 +319,6 @@
   box-shadow: 0 4px 16px rgba(255, 255, 255, 0.10);
 }
 
-/* ---------- Mobile Floating Buttons ---------- */
-.glass-mobile-floating-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 24px;
-  right: 24px;
-  z-index: 100;
-  width: 44px;
-  height: 44px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: transform 0.2s ease;
-}
-.glass-mobile-floating-btn:active {
-  transform: scale(0.9);
-}
-@media (min-width: 768px) {
-  .glass-mobile-floating-btn {
-    display: none;
-  }
-}
-
-.glass-mobile-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 101;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: transform 0.2s ease;
-}
-.glass-mobile-close-btn:active {
-  transform: scale(0.9);
-}
 
 /* ============================================================
    Mobile full-screen menu
@@ -230,6 +331,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .glass-mobile-menu__backdrop {
@@ -297,7 +399,11 @@
   background: rgba(12, 12, 12, 0.04);
 }
 
-.glass-navbar--light-bg .glass-navbar__mobile-btn {
+.glass-navbar--light-bg .glass-navbar__mobile-name {
+  color: #0c0c0c;
+}
+
+.glass-navbar--light-bg .glass-navbar__mobile-toggle {
   color: #0c0c0c;
 }
 

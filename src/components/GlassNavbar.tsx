@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, FileText, Download } from 'lucide-react'
+import { Download, FileText, X } from 'lucide-react'
+import Hamburger from 'hamburger-react'
 import { useLiquidGlass } from './ui/useLiquidGlass'
 import resumePdf from '../assets/files/Vibin_Resume.pdf'
 import './GlassNavbar.css'
@@ -96,7 +97,7 @@ const GlassNavbar: React.FC = () => {
       <nav
         ref={navRef}
         className={`glass-navbar ${scrolled ? 'glass-navbar--scrolled' : ''} ${
-          navTheme === 'light' ? 'glass-navbar--light-bg' : ''
+          navTheme === 'light' && !isMenuOpen ? 'glass-navbar--light-bg' : ''
         }`}
         aria-label="Main navigation"
         onPointerMove={(e) => {
@@ -113,6 +114,14 @@ const GlassNavbar: React.FC = () => {
         <div className="glass-navbar__glare" aria-hidden="true" />
 
         <div className="glass-navbar__content">
+          {/* Mobile Brand */}
+          <div className="glass-navbar__mobile-brand">
+            <img src="/favicon.svg" alt="Vibin" className="glass-navbar__mobile-photo" />
+            <span className="glass-navbar__mobile-name">
+              Vibin
+            </span>
+          </div>
+
           {/* Desktop Nav Links */}
           <div className="glass-navbar__links">
             {NAV_LINKS.map((item, i) => (
@@ -137,32 +146,32 @@ const GlassNavbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Desktop Resume Button */}
-          <motion.button
-            className="glass-navbar__resume-btn"
-            onClick={() => setIsResumeOpen(true)}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: NAV_LINKS.length * 0.08, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <FileText size={15} />
-            <span>Resume</span>
-          </motion.button>
+          <div className="glass-navbar__actions">
+            {/* Resume Button */}
+            <motion.button
+              className="glass-navbar__resume-btn"
+              onClick={() => setIsResumeOpen(true)}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: NAV_LINKS.length * 0.08, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <span>Resume</span>
+            </motion.button>
+
+            {/* Mobile Menu Toggle */}
+            <div className="glass-navbar__mobile-toggle">
+              <Hamburger 
+                toggled={isMenuOpen} 
+                toggle={setIsMenuOpen} 
+                size={22}
+                rounded
+                label={isMenuOpen ? "Close menu" : "Open menu"}
+              />
+            </div>
+          </div>
 
         </div>
       </nav>
-
-      {/* Floating Mobile Toggle Button */}
-      {!isMenuOpen && (
-        <button
-          className="glass-mobile-floating-btn"
-          onClick={() => setIsMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          <Menu size={28} color="#D7E2EA" strokeWidth={1.5} />
-        </button>
-      )}
-
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -173,14 +182,7 @@ const GlassNavbar: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="glass-mobile-menu__backdrop" />
-            <button
-              className="glass-mobile-close-btn"
-              onClick={() => setIsMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              <X size={28} color="#D7E2EA" strokeWidth={1.5} />
-            </button>
+            <div className="glass-mobile-menu__backdrop" onClick={() => setIsMenuOpen(false)} />
             <div className="glass-mobile-menu__links">
               {NAV_LINKS.filter(item => item.name !== 'Home').map((item, i) => (
                 <motion.a
@@ -196,16 +198,6 @@ const GlassNavbar: React.FC = () => {
                   {item.name}
                 </motion.a>
               ))}
-              <motion.button
-                onClick={() => { setIsResumeOpen(true); setIsMenuOpen(false) }}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 30 }}
-                transition={{ delay: NAV_LINKS.length * 0.04, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="glass-mobile-menu__link"
-              >
-                View Resume
-              </motion.button>
             </div>
           </motion.div>
         )}
