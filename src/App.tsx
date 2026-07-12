@@ -15,9 +15,12 @@ import {
 } from './components'
 
 
+import { ScrollProgress } from './components/ScrollProgress'
+
 function App() {
   return (
     <div className="min-h-screen bg-[#0C0C0C] font-[Kanit] text-[#D7E2EA]">
+      <ScrollProgress />
       <GlassNavbar />
       <HeroSection />
       <main>
