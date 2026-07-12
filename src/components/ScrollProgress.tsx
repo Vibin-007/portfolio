@@ -29,7 +29,7 @@ export const ScrollProgress = () => {
   return (
     <motion.div
       className={cn(
-        "group fixed top-[30px] left-8 cursor-pointer items-center gap-1 flex z-[200]"
+        "group fixed top-[30px] right-8 cursor-pointer items-center gap-1 flex z-[200]"
       )}
     >
       <div 
@@ -75,7 +75,7 @@ export const ScrollProgress = () => {
       <NumberFlow
         value={progressPercent}
         className={cn(
-          "text-white/50 absolute left-full ml-2 top-1/2 -translate-y-1/2 flex h-8 items-center justify-center px-2 text-xs font-medium tabular-nums opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+          "text-white/50 absolute right-full mr-2 top-1/2 -translate-y-1/2 flex h-8 items-center justify-center px-2 text-xs font-medium tabular-nums opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
         )}
         suffix="%"
       />
