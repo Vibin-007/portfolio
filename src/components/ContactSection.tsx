@@ -5,6 +5,7 @@ import { EtheralShadow } from './ui/etheral-shadow'
 import SplitTextReveal from './ui/split-text-reveal'
 import Magnet from './Magnet'
 import { SpotlightCard } from './ui/spotlight-card'
+import SpecularButton from './ui/SpecularButton'
 
 const ContactItem = ({ contact }: { contact: any }) => {
   return (
@@ -100,21 +101,37 @@ const ContactSection: React.FC = () => {
             
             {/* Top Section: Email Pill */}
             <div className="flex justify-center mb-12 sm:mb-16">
-              <a 
-                href="mailto:vibind007@gmail.com"
+              <SpecularButton
+                size="lg"
+                radius={999}
+                tint="#ffffff"
+                tintOpacity={0.03}
+                blur={0}
+                textColor="#f5f5f5"
+                lineColor="#ffffff"
+                baseColor="#525252"
+                intensity={1.2}
+                shineSize={30}
+                shineFade={50}
+                thickness={1.2}
+                speed={0.3}
+                followMouse
+                proximity={250}
+                autoAnimate={false}
                 onClick={handleCopyEmail}
-                aria-label="Email Vibin D at vibind007@gmail.com (click to copy to clipboard)"
-                className="group relative flex items-center justify-center gap-3 px-6 py-4 sm:px-10 sm:py-5 border border-[#D7E2EA]/20 bg-[#D7E2EA]/[0.03] hover:bg-[#D7E2EA]/10 hover:border-[#D7E2EA]/40 rounded-2xl sm:rounded-full transition-all duration-300"
+                className="!px-6 !py-4 sm:!px-10 sm:!py-5"
               >
-                <span className="text-xl sm:text-2xl md:text-3xl font-medium text-[#D7E2EA] tracking-wide group-hover:text-white transition-colors duration-300">
-                  vibind007@gmail.com
-                </span>
-                {copied ? (
-                  <Check className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0" />
-                ) : (
-                  <Copy className="w-5 h-5 sm:w-6 sm:h-6 text-[#D7E2EA]/40 group-hover:text-white transition-colors duration-300 flex-shrink-0" />
-                )}
-              </a>
+                <div className="flex items-center justify-center gap-3 whitespace-nowrap">
+                  <span className="text-xl sm:text-2xl md:text-3xl font-medium tracking-wide">
+                    vibind007@gmail.com
+                  </span>
+                  {copied ? (
+                    <Check className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0" />
+                  ) : (
+                    <Copy className="w-5 h-5 sm:w-6 sm:h-6 text-[#D7E2EA]/40 group-hover:text-white transition-colors duration-300 flex-shrink-0" />
+                  )}
+                </div>
+              </SpecularButton>
             </div>
 
             {/* Divider */}

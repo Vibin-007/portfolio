@@ -29,6 +29,11 @@ const SkillsSection: React.FC = () => {
       number: '05',
       name: 'Machine Learning',
       description: 'Building and evaluating supervised and unsupervised learning models — Linear & Logistic Regression, KNN, Decision Trees, Random Forest, K-Means, and DBSCAN — with expertise in preprocessing, feature engineering, and model optimization.'
+    },
+    {
+      number: '06',
+      name: 'Flutter',
+      description: ''
     }
   ]
 
