@@ -33,7 +33,7 @@ const SkillsSection: React.FC = () => {
     {
       number: '06',
       name: 'Flutter',
-      description: ''
+      description: 'Cross-platform mobile application development using Flutter and Dart, with experience building responsive Android applications, integrating REST APIs, local storage (Hive), state management, and creating modern, high-performance user interfaces from a single codebase.'
     }
   ]
 
