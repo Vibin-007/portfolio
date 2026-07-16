@@ -29,7 +29,7 @@ export const ScrollProgress = () => {
   return (
     <motion.div
       className={cn(
-        "group fixed top-[30px] right-8 cursor-pointer items-center gap-1 flex z-[200]"
+        "group fixed top-[30px] right-8 cursor-pointer items-center gap-1 hidden md:flex z-[200]"
       )}
     >
       <div 
