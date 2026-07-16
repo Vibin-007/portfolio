@@ -62,7 +62,7 @@ export function ExpandableCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#0C0C0C]/80 backdrop-blur-md h-full w-full z-40"
+            className="fixed inset-0 bg-[#0C0C0C]/80 backdrop-blur-md h-full w-full z-[9998]"
           />
         )}
       </AnimatePresence>
@@ -70,7 +70,7 @@ export function ExpandableCard({
         {active && (
           <div
             className={cn(
-              "fixed inset-0 grid place-items-center z-[100] sm:mt-16 before:pointer-events-none p-4 sm:p-0",
+              "fixed inset-0 grid place-items-center z-[9999] sm:mt-16 before:pointer-events-none p-4 sm:p-0",
             )}
           >
             <motion.div
