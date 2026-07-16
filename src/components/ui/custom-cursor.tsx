@@ -5,8 +5,6 @@ import { motion, useMotionValue, useSpring } from 'framer-motion'
 
 const CustomCursor: React.FC = () => {
   const [isHovering, setIsHovering] = useState(false)
-  
-  // Track pointer on desktop
   const [isDesktop, setIsDesktop] = useState(true)
 
   const cursorX = useMotionValue(-100)
@@ -18,18 +16,29 @@ const CustomCursor: React.FC = () => {
   const cursorYSpring = useSpring(cursorY, springConfig)
 
   useEffect(() => {
-    // Check if device has a fine pointer (mouse)
-    if (window.matchMedia("(pointer: coarse)").matches) {
-      setIsDesktop(false)
-      return
+    const checkDevice = () => {
+      const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+      const isMobileWidth = window.innerWidth < 1024; // Treat screens smaller than 1024px as mobile/tablet
+      
+      if (hasTouch || isCoarse || isMobileWidth) {
+        setIsDesktop(false)
+      } else {
+        setIsDesktop(true)
+      }
     }
 
+    checkDevice()
+    window.addEventListener('resize', checkDevice)
+
     const moveCursor = (e: MouseEvent) => {
+      if (!isDesktop) return
       cursorX.set(e.clientX)
       cursorY.set(e.clientY)
     }
 
     const handleMouseOver = (e: MouseEvent) => {
+      if (!isDesktop) return
       const target = e.target as HTMLElement
       // Check if we are hovering over a clickable element
       if (
@@ -48,18 +57,19 @@ const CustomCursor: React.FC = () => {
     window.addEventListener('mouseover', handleMouseOver)
 
     return () => {
+      window.removeEventListener('resize', checkDevice)
       window.removeEventListener('mousemove', moveCursor)
       window.removeEventListener('mouseover', handleMouseOver)
     }
-  }, [cursorX, cursorY])
+  }, [cursorX, cursorY, isDesktop])
 
   if (!isDesktop) return null
 
   return (
     <>
-      {/* Outer Circle trailing the cursor */}
+      {/* Outer Circle trailing the cursor - hidden on screens below md breakpoint */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-[#D7E2EA]/50 pointer-events-none z-[9999] flex items-center justify-center backdrop-blur-[2px]"
+        className="hidden md:flex fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-[#D7E2EA]/50 pointer-events-none z-[9999] items-center justify-center backdrop-blur-[2px]"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
@@ -74,9 +84,9 @@ const CustomCursor: React.FC = () => {
         transition={{ duration: 0.2 }}
       />
       
-      {/* Inner Dot exactly on the cursor */}
+      {/* Inner Dot exactly on the cursor - hidden on screens below md breakpoint */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-[#D7E2EA] pointer-events-none z-[9999] shadow-[0_0_10px_rgba(215,226,234,0.8)]"
+        className="hidden md:block fixed top-0 left-0 w-2 h-2 rounded-full bg-[#D7E2EA] pointer-events-none z-[9999] shadow-[0_0_10px_rgba(215,226,234,0.8)]"
         style={{
           x: cursorX,
           y: cursorY,
