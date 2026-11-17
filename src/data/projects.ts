@@ -47,7 +47,6 @@ export const projects: Project[] = [
       alt: "Admin dashboard of RGF 2025 college event management system with category listings, event metrics, and registration logs.",
       image: "/images/Event.png",
     },
-    status: "Source available on request",
     featured: true,
   },
   {
@@ -63,7 +62,6 @@ export const projects: Project[] = [
       variant: "campnotes",
       alt: "Preview of CampNotes academic resource sharing platform with subject filters and secure notes repository.",
     },
-    status: "Source available on request",
     featured: true,
   },
   {
@@ -79,7 +77,6 @@ export const projects: Project[] = [
       variant: "queueless",
       alt: "Preview of QueueLess live queue status dashboard showing serving tokens, wait times, and staff controls.",
     },
-    status: "Source available on request",
     featured: true,
   },
   {
@@ -95,7 +92,6 @@ export const projects: Project[] = [
       variant: "vibe",
       alt: "Generated preview of a dark mobile music player interface with playback controls.",
     },
-    status: "Private build",
     note: "Collaborative real-time synchronization is presented as an intended capability of the app rather than a publicly verifiable released feature.",
     featured: true,
   },

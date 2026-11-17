@@ -62,32 +62,34 @@ export function ProjectPanel({ project, reversed = false }: ProjectPanelProps) {
           ))}
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center gap-5" data-reveal="up">
-          {hasLive ? (
-            <a href={project.liveUrl} target="_blank" rel="noreferrer noopener" className="ulink text-sm text-paper">
-              View live
-              <ArrowUpRight size={15} strokeWidth={1.5} />
-            </a>
-          ) : null}
+        {(hasLive || hasCode || project.status) ? (
+          <div className="mt-8 flex flex-wrap items-center gap-5" data-reveal="up">
+            {hasLive ? (
+              <a href={project.liveUrl} target="_blank" rel="noreferrer noopener" className="ulink text-sm text-paper">
+                View live
+                <ArrowUpRight size={15} strokeWidth={1.5} />
+              </a>
+            ) : null}
 
-          {hasCode ? (
-            <a href={project.githubUrl} target="_blank" rel="noreferrer noopener" className="ulink text-sm text-paper">
-              <GithubMark size={15} />
-              Source code
-            </a>
-          ) : null}
+            {hasCode ? (
+              <a href={project.githubUrl} target="_blank" rel="noreferrer noopener" className="ulink text-sm text-paper">
+                <GithubMark size={15} />
+                Source code
+              </a>
+            ) : null}
 
-          {!hasLive && !hasCode && project.status ? (
-            <span className="inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted">
-              <Lock size={12} strokeWidth={1.6} />
-              {project.status}
-            </span>
-          ) : null}
+            {!hasLive && !hasCode && project.status ? (
+              <span className="inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted">
+                <Lock size={12} strokeWidth={1.6} />
+                {project.status}
+              </span>
+            ) : null}
 
-          {hasLive && !hasCode && project.status ? (
-            <span className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted">{project.status}</span>
-          ) : null}
-        </div>
+            {hasLive && !hasCode && project.status ? (
+              <span className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted">{project.status}</span>
+            ) : null}
+          </div>
+        ) : null}
       </div>
 
       <div className={`md:col-span-7 ${reversed ? "md:order-1" : ""}`}>
