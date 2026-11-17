@@ -51,7 +51,16 @@ export function Hero({ intro }: HeroProps) {
 
             <div className="mt-8 flex flex-col gap-6">
               <div className="max-w-xl">
-                <p data-hero="name" className="font-mono text-[0.78rem] uppercase tracking-[0.42em] text-paper">
+                <p
+                  data-hero="name"
+                  className="text-paper leading-none tracking-[-0.02em] whitespace-nowrap"
+                  style={{
+                    fontFamily: "'Bodoni Moda', ui-serif, Georgia, serif",
+                    fontSize: "clamp(1.6rem, 3.5vw, 3rem)",
+                    fontWeight: 600,
+                    fontOpticalSizing: "auto",
+                  }}
+                >
                   {hero.name}
                 </p>
                 <p data-hero="subtitle" className="body-lg mt-4">
