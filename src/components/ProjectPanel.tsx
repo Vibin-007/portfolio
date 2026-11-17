@@ -15,7 +15,7 @@ function ProjectVisual({ project }: { project: Project }) {
   if (project.preview.kind === "phone") return <PhoneMock />;
   return (
     <BrowserMock
-      variant={project.preview.variant === "event" ? "event" : "portfolio"}
+      variant={project.preview.variant as "event" | "portfolio" | "campnotes" | "queueless"}
       image={project.preview.image}
       alt={project.preview.alt}
     />

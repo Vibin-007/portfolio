@@ -1,6 +1,6 @@
 export type PreviewKind = "browser" | "phone" | "abstract";
 
-export type PreviewVariant = "event" | "portfolio" | "vibe" | "scanner" | "summarizer";
+export type PreviewVariant = "event" | "portfolio" | "vibe" | "scanner" | "summarizer" | "campnotes" | "queueless";
 
 export interface ProjectPreview {
   kind: PreviewKind;
@@ -51,24 +51,40 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "personal-portfolio",
+    id: "campnotes",
     index: "02",
-    title: "Personal Portfolio",
-    category: "Web Application / Personal",
+    title: "CampNotes",
+    category: "Academic Resource Sharing Platform",
     description:
-      "A highly interactive personal portfolio built with React and Framer Motion, featuring custom scroll animations, dynamic sticky layouts, and a sleek dark theme.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "A platform for secure uploading, managing, and downloading of academic resources. Built with responsive interfaces, role-based access control, PostgreSQL models for structured storage, and end-to-end file validation.",
+    technologies: ["Django", "PostgreSQL", "JavaScript", "HTML/CSS", "Python"],
     preview: {
       kind: "browser",
-      variant: "portfolio",
-      alt: "Generated preview of a dark, animated personal portfolio interface.",
+      variant: "campnotes",
+      alt: "Preview of CampNotes academic resource sharing platform with subject filters and secure notes repository.",
     },
-    status: "You are viewing this build",
+    status: "Source available on request",
+    featured: true,
+  },
+  {
+    id: "queueless",
+    index: "03",
+    title: "QueueLess",
+    category: "Real-Time Queue Management App",
+    description:
+      "A real-time queue management app where customers book categorized tokens (General, Priority, Support starting at #101) with live 5-minute wait time estimates, while staff call the next token, cancel, or reset the queue via polling updates.",
+    technologies: ["React 19", "Vite", "Django REST Framework", "Python", "SQLite"],
+    preview: {
+      kind: "browser",
+      variant: "queueless",
+      alt: "Preview of QueueLess live queue status dashboard showing serving tokens, wait times, and staff controls.",
+    },
+    status: "Source available on request",
     featured: true,
   },
   {
     id: "vibe",
-    index: "03",
+    index: "04",
     title: "Vibe",
     category: "Android Application / Personal",
     description:
