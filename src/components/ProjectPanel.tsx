@@ -13,7 +13,13 @@ interface ProjectPanelProps {
 
 function ProjectVisual({ project }: { project: Project }) {
   if (project.preview.kind === "phone") return <PhoneMock />;
-  return <BrowserMock variant={project.preview.variant === "event" ? "event" : "portfolio"} />;
+  return (
+    <BrowserMock
+      variant={project.preview.variant === "event" ? "event" : "portfolio"}
+      image={project.preview.image}
+      alt={project.preview.alt}
+    />
+  );
 }
 
 export function ProjectPanel({ project, reversed = false }: ProjectPanelProps) {

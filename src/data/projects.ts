@@ -5,8 +5,9 @@ export type PreviewVariant = "event" | "portfolio" | "vibe" | "scanner" | "summa
 export interface ProjectPreview {
   kind: PreviewKind;
   variant: PreviewVariant;
-  /** Alt text for the generated visual. */
+  /** Alt text for the visual. */
   alt: string;
+  image?: string;
 }
 
 export interface Project {
@@ -38,12 +39,13 @@ export const projects: Project[] = [
     title: "College Event Website",
     category: "Web Application / Academic",
     description:
-      "Responsive website for a college event with multiple event categories, registration forms, and a user-friendly interface for event details and schedules.",
+      "Responsive event management platform and admin dashboard featuring categorized event listings, online student registrations, payment logging, and schedule tracking.",
     technologies: ["Django", "PostgreSQL", "JavaScript", "HTML/CSS"],
     preview: {
       kind: "browser",
       variant: "event",
-      alt: "Generated preview of a college event website with category listings and a registration form.",
+      alt: "Admin dashboard of RGF 2025 college event management system with category listings, event metrics, and registration logs.",
+      image: "/images/Event.png",
     },
     status: "Source available on request",
     featured: true,

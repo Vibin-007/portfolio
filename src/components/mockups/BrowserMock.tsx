@@ -1,5 +1,7 @@
 interface BrowserMockProps {
   variant: "event" | "portfolio";
+  image?: string;
+  alt?: string;
 }
 
 function Chrome({ url }: { url: string }) {
@@ -130,11 +132,26 @@ function PortfolioUI() {
 }
 
 /** Original CSS browser preview — used because no real project screenshots exist. */
-export function BrowserMock({ variant }: BrowserMockProps) {
+export function BrowserMock({ variant, image, alt }: BrowserMockProps) {
+  const screenshot = image || (variant === "event" ? "/images/Event.png" : undefined);
+
   return (
     <div className="relative w-full overflow-hidden rounded-xl border border-line bg-[#0d0d0d] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)]">
-      <Chrome url={variant === "event" ? "college-event.edu/events" : "vibin.dev"} />
-      <div className="aspect-[16/10] p-5">{variant === "event" ? <EventUI /> : <PortfolioUI />}</div>
+      <Chrome url={variant === "event" ? "rgf2025.edu/admin/dashboard" : "vibin.dev"} />
+      <div className="aspect-[16/10] overflow-hidden bg-ink">
+        {screenshot ? (
+          <img
+            src={screenshot}
+            alt={alt ?? (variant === "event" ? "College Event Management Admin Dashboard" : "Project preview")}
+            className="h-full w-full object-cover object-top transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+            loading="lazy"
+          />
+        ) : (
+          <div className="h-full p-5">
+            {variant === "event" ? <EventUI /> : <PortfolioUI />}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
